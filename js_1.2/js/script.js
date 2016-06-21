@@ -1,6 +1,6 @@
 var arrNames = [];
-var numUsers = 5;
-for (var i = 0; i < numUsers; i++) {
+var NUM_USERS = 5;
+for (var i = 0; i < NUM_USERS; i++) {
     arrNames[i] = prompt('Enter any name: ', 'User');
     console.log('arrNames[i] = ', arrNames[i]);
 }
@@ -11,7 +11,7 @@ var inputName = prompt('Please, enter your name: ', 'User');
 
 var foundName = false;
 
-for (var i = 0; i < numUsers; i++) {
+for (var i = 0; i < NUM_USERS; i++) {
     if (inputName === arrNames[i]) {
         foundName = true;
     }
