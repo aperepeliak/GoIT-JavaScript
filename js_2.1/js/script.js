@@ -1,15 +1,5 @@
 var testQuiz = {
-    generateContainer: function() {
-        var div = document.createElement('div');
-        div.className = 'container';
-        document.body.appendChild(div);
-    },
-    generateDiv: function(parentElemClassName, newElemClassName) {
-        var div = document.createElement('div');
-        div.className = newElemClassName;
-        var parent = document.querySelector(parentElemClassName);
-        parent.appendChild(div);
-    },
+   
     generateNewElem: function(newElemType, newElemClassName, parentElemClassName, ordinalNum, innerContent) {
         var newElement = document.createElement(newElemType);
 
@@ -37,12 +27,6 @@ var testQuiz = {
         } else {
             document.body.appendChild(newElement);
         }
-
-        // var parentElemClassString = parentElemClassName || 'document.body';
-
-
-        // parent[ordNum].appendChild(newElement);
-
     },
 
 };
@@ -51,25 +35,3 @@ var testQuiz = {
 testQuiz.generateNewElem('div', 'container');
 testQuiz.generateNewElem('div', 'page-header', 'container');
 testQuiz.generateNewElem('h1', 'heading', 'page-header', 0, 'Тест по программированию');
-
-// testQuiz.generateContainer();
-// console.log('container was created');
-// testQuiz.generateDiv('.container', 'page-header');
-// console.log('a new div was created');
-
-// testQuiz.generateNewElem('div', 'test', 'container', 0);
-// console.log('a new div test was created');
-// testQuiz.generateNewElem('div', 'test', 'container', 0);
-// console.log('a new div test was created');
-// testQuiz.generateNewElem('h1', 'heading', 'test', 0);
-// console.log('a new div test was created');
-// testQuiz.generateNewElem('h1', 'heading', 'test', 1);
-
-// testQuiz.generateNewElem('div', 'wrapper');
-// console.log('created wrapper');
-
-// testQuiz.generateNewElem('main');
-// console.log('created main');
-
-// testQuiz.generateNewElem('ul', 'menu', 'container', 1);
-// console.log('created main');
