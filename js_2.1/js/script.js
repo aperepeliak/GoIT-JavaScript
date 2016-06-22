@@ -1,7 +1,7 @@
 var testQuiz = {
 
-    LI_NUM: 3, // Number of questions
-    CHCKBX_NUM: 3, // Number of options in each question
+    LI_NUM: 3,		// Number of questions
+    CHCKBX_NUM: 3, 	// Number of options in each question
 
     generateNewElem: function(newElemType, newElemClassName, parentElemClassName, ordinalNum, innerContent) {
         var newElement = document.createElement(newElemType);
@@ -33,7 +33,8 @@ var testQuiz = {
     },
 
     addAttribute: function(attrName, attrValue, className, ordinalNum) {
-        var element = (ordinalNum) ? (document.getElementsByClassName(className)[ordinalNum]) : (document.getElementsByClassName(className)[0]);
+        var element = (ordinalNum) 	? (document.getElementsByClassName(className)[ordinalNum]) 
+        							: (document.getElementsByClassName(className)[0]);
 
         var att = document.createAttribute(attrName);
         att.value = attrValue;
@@ -58,7 +59,7 @@ var testQuiz = {
         this.generateNewElem('ul', 'list-group', 'quiz_form');
 
         // list-group-items
-        var k = 1; // checkboxes counter
+        var k = 1; 		// checkboxes counter
         for (var i = 0; i < this.LI_NUM; i++) {
             var question = 'Вопрос №' + (i + 1);
             this.generateNewElem('li', 'list-group-item count-li-' + (i + 1), 'list-group', 0, question);
