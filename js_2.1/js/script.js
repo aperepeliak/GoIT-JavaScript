@@ -1,5 +1,5 @@
 var testQuiz = {
-   
+
     generateNewElem: function(newElemType, newElemClassName, parentElemClassName, ordinalNum, innerContent) {
         var newElement = document.createElement(newElemType);
 
@@ -29,9 +29,32 @@ var testQuiz = {
         }
     },
 
+    addAttribute: function(attrName, attrValue, className, ordinalNum) {
+        var element = (ordinalNum) 	? (document.getElementsByClassName(className)[ordinalNum]) 
+        							: (document.getElementsByClassName(className)[0]);
+        
+        var att = document.createAttribute(attrName);
+        att.value = attrValue;
+        element.setAttributeNode(att);
+    },
+
+    generate: function() {
+
+    	// container 
+        this.generateNewElem('div', 'container');
+
+        // header
+        this.generateNewElem('div', 'page-header', 'container');
+        this.generateNewElem('h1', 'heading', 'page-header', 0, 'Тест по программированию');
+
+        // form
+        this.generateNewElem('form', 'quiz_form', 'container');
+        this.addAttribute('action', '#', 'quiz_form');
+		this.addAttribute('method', 'GET', 'quiz_form');
+    }
+
 };
 
 
-testQuiz.generateNewElem('div', 'container');
-testQuiz.generateNewElem('div', 'page-header', 'container');
-testQuiz.generateNewElem('h1', 'heading', 'page-header', 0, 'Тест по программированию');
+testQuiz.generate();
+
