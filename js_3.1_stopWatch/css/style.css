@@ -5,3 +5,7 @@ body {
 .milisecs {
 	font-size: 12px;
 }
+
+.btn-lg {
+	width: 200px;
+}
