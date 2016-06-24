@@ -70,9 +70,12 @@ function startHandler() {
 }
 
 function clearHandler() {
-    invokeClear = true;
+    // invokeClear = true;
 
     k = 0;
+    scnds = 0;
+	mnts = 0;
+	hrs = 0;
     milliseconds.innerHTML = '000';
     seconds.innerHTML = '00';
     minutes.innerHTML = '00';
