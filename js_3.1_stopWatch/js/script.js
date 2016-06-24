@@ -19,7 +19,7 @@ function startHandler() {
 
     function timer() {
 
-    	if (switchStartPause) {
+        if (switchStartPause) {
             clearInterval(msTimer);
         }
 
@@ -28,31 +28,50 @@ function startHandler() {
             invokeClear = false;
         }
 
-    	if (k === 999) {
-    		k = 0;
-    		if (scnds === 59) {
-    			scnds = 0;
-    			if (mnts == 59) {
-    				if (hrs === 23) {
-    					hrs = 0;
-    				} else {
-    					hrs++;
-    				}
-    			} else {
-    				mnts++;
-    			}
-    		} else {
-    			scnds++;
-    		}
-    	} 
+        if (k === 999) {
+            k = 0;
+            if (scnds === 59) {
+                scnds = 0;
+                if (mnts == 59) {
+                    if (hrs === 23) {
+                        hrs = 0;
+                    } else {
+                        hrs++;
+                    }
+                } else {
+                    mnts++;
+                }
+            } else {
+                scnds++;
+            }
+        }
 
-    	milliseconds.innerHTML = k;	
-    	seconds.innerHTML = scnds;
-    	minutes.innerHTML = mnts;
-    	hours.innerHTML = hrs;
+        if (k < 10) {
+            milliseconds.innerHTML = '0' + '0' + k;
+        } else if (k < 100) {
+            milliseconds.innerHTML = '0' + k;
+        } else {
+            milliseconds.innerHTML = k;
+        }
 
+        if (scnds < 10) {
+            seconds.innerHTML = '0' + scnds;
+        } else {
+            seconds.innerHTML = scnds;
+        }
 
-        
+        if (mnts < 10) {
+            minutes.innerHTML = '0' + mnts;
+        } else {
+            minutes.innerHTML = mnts;
+        }
+
+        if (hrs < 10) {
+            hours.innerHTML = '0' + hrs;
+        } else {
+            hours.innerHTML = hrs;
+        }
+
         k++;
     }
 
@@ -70,12 +89,10 @@ function startHandler() {
 }
 
 function clearHandler() {
-    // invokeClear = true;
-
     k = 0;
     scnds = 0;
-	mnts = 0;
-	hrs = 0;
+    mnts = 0;
+    hrs = 0;
     milliseconds.innerHTML = '000';
     seconds.innerHTML = '00';
     minutes.innerHTML = '00';
