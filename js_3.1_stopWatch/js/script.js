@@ -19,16 +19,7 @@ function startHandler() {
 
     function timer() {
 
-        if ((k % 1000) === 0) {
-            milliseconds.innerHTML = '000';
-        } else {
-            milliseconds.innerHTML = k % 1000;
-        }
-
-        scnds = Math.floor(k / 1000);
-        seconds.innerHTML = (scnds < 10)? ('0' + scnds) : (scnds);
-
-        if (switchStartPause) {
+    	if (switchStartPause) {
             clearInterval(msTimer);
         }
 
@@ -36,6 +27,32 @@ function startHandler() {
             clearInterval(msTimer);
             invokeClear = false;
         }
+
+    	if (k === 999) {
+    		k = 0;
+    		if (scnds === 59) {
+    			scnds = 0;
+    			if (mnts == 59) {
+    				if (hrs === 23) {
+    					hrs = 0;
+    				} else {
+    					hrs++;
+    				}
+    			} else {
+    				mnts++;
+    			}
+    		} else {
+    			scnds++;
+    		}
+    	} 
+
+    	milliseconds.innerHTML = k;	
+    	seconds.innerHTML = scnds;
+    	minutes.innerHTML = mnts;
+    	hours.innerHTML = hrs;
+
+
+        
         k++;
     }
 
