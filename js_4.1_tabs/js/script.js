@@ -5,7 +5,9 @@ $(function () {
 		$('.tab-1').css('display', 'block');
 		$('.tab-2').css('display', 'none');
 		$('.tab-3').css('display', 'none');
-		console.log('clicked tab 1');
+		$(this).parent().addClass('active');
+		$('.link-2').parent().removeClass('active');
+		$('.link-3').parent().removeClass('active');
 	});
 
 	// Tab-2 active
@@ -13,7 +15,9 @@ $(function () {
 		$('.tab-1').css('display', 'none');
 		$('.tab-2').css('display', 'block');
 		$('.tab-3').css('display', 'none');
-		console.log('clicked tab 2');
+		$(this).parent().addClass('active');
+		$('.link-1').parent().removeClass('active');
+		$('.link-3').parent().removeClass('active');
 	});
 
 	// Tab-3 active
@@ -21,7 +25,9 @@ $(function () {
 		$('.tab-1').css('display', 'none');
 		$('.tab-2').css('display', 'none');
 		$('.tab-3').css('display', 'block');
-		console.log('clicked tab 3');
+		$(this).parent().addClass('active');
+		$('.link-1').parent().removeClass('active');
+		$('.link-2').parent().removeClass('active');
 	});
 
 });
