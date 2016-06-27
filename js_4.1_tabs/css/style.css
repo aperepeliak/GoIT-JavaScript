@@ -1,0 +1,23 @@
+.container {
+	font-family: 'Titillium Web';
+	font-size: 16px;
+}
+
+.page-header h1 {
+	font-weight: bold;
+}
+
+/*.nav,
+.nav-tabs {
+	margin-bottom: 20px;
+}*/
+
+.panel {
+	border-top: none;
+	border-radius: 0 0 4px 4px;
+}
+
+.tab-2,
+.tab-3 {
+	display: none;
+}
