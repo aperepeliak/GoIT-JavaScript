@@ -7,9 +7,22 @@
 	font-weight: bold;
 }
 
-.abc {
-	height: 32px;
+.tips {
+	display: none;	
+	height: 34px;
+	padding: 5px;
+	margin-bottom: 15px;
 	color: black;
-	background-color: #fff;
-	border: 1px solid #ccc;
+	background-color: #D9EDF7;
+	border: 1px solid #D9EDF7;
+	border-radius: 4px;
+	text-align: center;
+}
+
+.tip-2 {
+	margin-top: 49px;
+}
+
+.tip-3 {
+	margin-top: 99px;
 }
