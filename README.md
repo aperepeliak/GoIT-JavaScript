@@ -1,2 +1,2 @@
 # GoIT-JavaScript
-go frontend js homework
+GoFrontend js homework
