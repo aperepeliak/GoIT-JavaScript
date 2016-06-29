@@ -2,6 +2,8 @@ $(function() {
 
     // tip 1
     $('.firstName').on('mouseover', function() {
+        // $('.tip-1').animate({ display: 'block' });
+
         $('.tip-1').css('display', 'block');
         $('.tip-2').css('display', 'none');
         $('.tip-3').css('display', 'none');
