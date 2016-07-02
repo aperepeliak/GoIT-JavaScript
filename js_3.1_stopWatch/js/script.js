@@ -16,8 +16,14 @@ var mnts = 0;
 var hrs = 0;
 
 function startHandler() {
-
+    var startTime = 0;
     function timer() {
+        // var startTime = new Date().getTime(); 
+        startTime = startTime ? startTime : +new Date();
+        var endTime = +new Date();       
+                
+        console.log('endTime = ', endTime);
+
 
         if (switchStartPause) {
             clearInterval(msTimer);
@@ -28,7 +34,7 @@ function startHandler() {
             invokeClear = false;
         }
 
-        if (k === 999) {
+        if (k >= 999) {
             k = 0;
             if (scnds === 59) {
                 scnds = 0;
@@ -72,7 +78,23 @@ function startHandler() {
             hours.innerHTML = hrs;
         }
 
-        k++;
+        // var startTime = +new Date();
+        // var startTime = Math.round(+new Date() / 1000);
+
+
+
+        // var endTime = Math.round(+new Date() / 1000);
+        // var endTime = new Date().getTime();
+
+
+        // var startTime = +new Date();
+        // console.log('startTime = ', startTime);
+
+        k += endTime - startTime;
+        console.log("k = ", k);
+
+        startTime = +new Date();
+        console.log('startTime   = ', startTime);
     }
 
     var msTimer = setInterval(timer, 1);
