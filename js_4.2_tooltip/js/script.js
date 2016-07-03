@@ -13,7 +13,7 @@ $(function() {
 
 
     $firstName.on('mouseover', function() {
-        $tip1.animate({ 'opacity': '1' });
+        $tip1.animate({ 'opacity': '1' }, 200);
 
         // $tip1.css('display', 'block');
         $tip2.css('opacity', '0');
@@ -25,7 +25,7 @@ $(function() {
 
     // tip 2
     $lastName.on('mouseover', function() {
-        $tip2.animate({ 'opacity': '1' });
+        $tip2.animate({ 'opacity': '1' }, 200);
         $tip1.css('opacity', '0');
         $tip3.css('opacity', '0');
     });
@@ -35,7 +35,7 @@ $(function() {
 
     // tip 3
     $address.on('mouseover', function() {
-        $tip3.animate({ 'opacity': '1' });
+        $tip3.animate({ 'opacity': '1' }, 200);
         $tip1.css('opacity', '0');
         $tip2.css('opacity', '0');
     });
