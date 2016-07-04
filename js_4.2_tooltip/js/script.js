@@ -10,8 +10,6 @@ $(function() {
     
 
     // tip 1
-
-
     $firstName.on('mouseover', function() {
         $tip1.animate({ 'opacity': '1' }, 200);
 
