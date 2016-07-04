@@ -12,8 +12,6 @@ $(function() {
     // tip 1
     $firstName.on('mouseover', function() {
         $tip1.animate({ 'opacity': '1' }, 200);
-
-        // $tip1.css('display', 'block');
         $tip2.css('opacity', '0');
         $tip3.css('opacity', '0');
     });
