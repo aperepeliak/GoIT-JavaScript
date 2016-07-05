@@ -7,50 +7,56 @@
     <link href='https://fonts.googleapis.com/css?family=Play:400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/chosen.css">
     <!-- Optional theme -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script type="text/javascript" src="js/jquery.jcarousel.js"></script>
+    <script src="js/chosen.jquery.js" type="text/javascript"></script>
     <script src="js/script.js"></script>
 </head>
 
 <body>
     <div class="container">
         <div class="row">
-            <div class="page-header col-md-offset-1">
-                <h1>BELL | CAT | HITACHI <span class="moveRight"><small>jCarousel example</small></span></h1>
+            <div class="page-header col-md-12">
+                <h1>Mining Equipment<span class="moveRight"><small>jQuery plugins</small></span></h1>
             </div>
         </div>
         <div class="row">
-            <div class="jcarousel col-md-10 col-md-offset-2 no-padding">
+            <div class="jcarousel col-md-8 no-padding">
                 <ul>
-                    <li><img src="img/img1.jpg" width="700" alt="Mining Equipment"></li>
-                    <li><img src="img/img2.jpg" width="700" alt="Mining Equipment"></li>
-                    <li><img src="img/img3.jpg" width="700" alt="Mining Equipment"></li>
-                    <li><img src="img/img4.jpg" width="700" alt="Mining Equipment"></li>
-                    <li><img src="img/img5.jpg" width="700" alt="Mining Equipment"></li>
+                    <li><img src="img/img1.jpg" width="700" alt="BELL"></li>
+                    <li><img src="img/img2.jpg" width="700" alt="HITACHI"></li>
+                    <li><img src="img/img3.jpg" width="700" alt="BELL"></li>
+                    <li><img src="img/img4.jpg" width="700" alt="CATERPILLAR"></li>
+                    <li><img src="img/img5.jpg" width="700" alt="BELL"></li>
                 </ul>
                 <!-- Controls -->
                 <a class="jcarousel-prev controls" href="#">&#60;</a>
                 <a class="jcarousel-next controls" href="#">&#62;</a>
                 <p class="jcarousel-pagination"></p>
             </div>
-        </div>
-        <div class="row">
-        	<select data-placeholder="Choose a Country..." class="chosen-select" style="width:350px;" tabindex="2">
-            <option value=""></option>
-            <option value="United States">United States</option>
-            <option value="United Kingdom">United Kingdom</option>
-            <option value="Afghanistan">Afghanistan</option>
-            <option value="Aland Islands">Aland Islands</option>
-            <option value="Albania">Albania</option>
-            <option value="Algeria">Algeria</option>
-            <option value="American Samoa">American Samoa</option>
-            <option value="Andorra">Andorra</option>
-            <option value="Angola">Angola</option>
-            <option value="Anguilla">Anguilla</option>
-            <option value="Antarctica">Antarctica</option>
-          </select>
+            <div class="col-md-4">
+                <div class="row">
+                    <div class="col-md-10 col-md-offset-2">
+                        <h3>Order now:</h3>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-10 col-md-offset-2">
+                        <select data-placeholder="Choose a Company..." class="chosen-select" style="width:350px;" tabindex="2">
+                            <option value=""></option>
+                            <option value="BELL">BELL</option>
+                            <option value="Caterpillar">Caterpillar</option>
+                            <option value="Hitachi">Hitachi</option>
+                            <option value="Volvo">Volvo</option>
+                            <option value="Komatsu">Komatsu</option>
+                            <option value="BelAZ">BelAZ</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </body>

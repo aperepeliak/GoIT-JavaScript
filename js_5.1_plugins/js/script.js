@@ -15,4 +15,6 @@ $(function() {
             return '<a href="#' + page + '">' + page + '</a>';
         }
     });
+
+    $(".chosen-select").chosen();
 });
