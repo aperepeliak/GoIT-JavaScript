@@ -1,10 +1,10 @@
 body {
     background-color: #333;
     font-family: Play, Arial, sans-serif;
+    color: #eee;
 }
 
 h1 {
-    color: #eee;
     font-weight: bold;
 }
 
@@ -15,6 +15,8 @@ h1 {
 .no-padding {
     padding: 0;
 }
+
+/*Carousel styling*/
 
 .jcarousel {
     width: 700px;
@@ -88,6 +90,4 @@ h1 {
     background-color: rgba(50, 50, 50, 0.8);
 }
 
-h3 {
-    color: #eee;
-}
+

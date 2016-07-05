@@ -1,7 +1,9 @@
 $(function() {
+
+	// Carousel
     $('.jcarousel').jcarousel();
 
-    
+
     $('.jcarousel-prev').jcarouselControl({
         target: '-=1'
     });
@@ -16,5 +18,15 @@ $(function() {
         }
     });
 
+    // Selection
     $(".chosen-select").chosen();
+
+    // Checkboxes
+    $('input').iCheck({
+        checkboxClass: 'icheckbox_square-yellow',
+        radioClass: 'iradio_square-yellow',
+        increaseArea: '20%' // optional
+    });
+
+    $('.css-checkbox').iCheck('destroy');
 });
