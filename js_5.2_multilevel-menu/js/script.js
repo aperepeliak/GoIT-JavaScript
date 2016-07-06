@@ -1,24 +1,28 @@
-$(function () {
-	$('.dropdown').on('mouseover', function() {
-		$('.sub-menu').css({
-			display: 'block',
-			backgroundColor: '#FF6464'
-		});
-		$('.sub-menu').animate({
-			height: '100px',
-			top: '30px'
-		}, 100, 'easeInSine');
-	});
+$(function() {
 
-	$('.dropdown').on('mouseout', function() {
-		$('.sub-menu').animate({
-			height: '0px'
-		}, 100, 'easeInSine');
+    var $dropdown = $('.dropdown');
+    var $dropMenu = $('.down-menu');
 
-		$('.sub-menu').css({
-			display: 'none'
-		});
+    var $dropright = $('.dropright');
+    var $rightMenu = $('.right-menu');
 
 
-	});
+    $dropdown.on('mouseover', function() {
+        $dropMenu.addClass('down-menu-animated');
+    });
+
+    $dropright.on('mouseover', function() {
+        $rightMenu.addClass('right-menu-animated');
+        $dropMenu.css('overflow', 'visible');
+    });
+
+    $dropright.on('mouseout', function() {
+        $rightMenu.removeClass('right-menu-animated');
+        $dropMenu.css('overflow', 'hidden');
+    });
+
+    $dropdown.on('mouseout', function() {
+        $dropMenu.removeClass('down-menu-animated');
+    });
+
 });
