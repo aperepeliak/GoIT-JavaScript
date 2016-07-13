@@ -5,22 +5,42 @@
     <meta charset="UTF-8">
     <title>Templating</title>
     <link href='https://fonts.googleapis.com/css?family=Ubuntu:400,700' rel='stylesheet' type='text/css'>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="js/tmpl.js"></script>
     <script src="js/script.js"></script>
-
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-
-	<script type="text/template" id="test">
-		<% for (var i=0; i<data.length; i++) { %>
-			<h1><%= data[i].title %></h1>
-			<p><%= data[i].content %></p>
-		<% } %>
-
-	</script>
-
+    <script type="text/template" id="testQuiz">
+        <div class="container">
+            <div class="page-header">
+                <h1 class="heading"><%= headTitle %></h1>
+            </div>
+            <form class="quiz" action="#" method="GET">
+                <ul class="list-group">
+                    <% for (var i = 0; i < q_data.length; i++) { %>
+                        <li class="list-group-item">
+                            <%= q_data[i].question %>
+                                <% for (var j = 0; j < a_data.length; j++) { %>
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox">
+                                            <span class="quiz__answer"><%= a_data[j].answer %></span>
+                                        </label>
+                                    </div>
+                                    <% } %>
+                        </li>
+                        <% } %>
+                </ul>
+                <input class="btn btn-primary" type="submit" value="<%= submitData %>">
+            </form>
+        </div>
+    </script>
 </body>
 
 </html>

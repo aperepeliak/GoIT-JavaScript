@@ -1,27 +1,33 @@
 $(function() {
 
-	var html = $('#test').html();
+    var html = $('#testQuiz').html();
 
-	var articles = [
-	{
-		title: 'Article 1',
-		content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores, amet voluptas possimus illo necessitatibus quidem velit ad laudantium, nisi adipisci facilis ducimus a delectus dicta, facere recusandae error? Impedit, quis.' 
-	},
-	{
+    var numQuestions = 3;
+    var numAnswers = 3;
 
-		title: 'Article 2',
-		content: 'ctus dicta, facere recusandae error? Impedit, quis.' 
-	},
-	{
+    var questions = [];
+    var answers = [];
 
-		title: 'Article 3',
-		content: 'Dolores, amet voluptas possimus illo necessitatibus quidem velit ad laudantium, nisi adipisci facilis ducimus a delectus dicta, facere recusandae error? Impedit, quis.' 
-	}
-	];
+    var title = "Тест по программированию";
+    var submitValue = "Проверить мои результаты";
 
-	var content = tmpl(html, {
-		data: articles
-	});
-	$('body').append(content);
+    for (var i = 0; i < numQuestions; i++) {
+        questions[i] = {
+            question: "Вопрос №" + (i + 1)
+        };
+    }
+    for (var j = 0; j < numAnswers; j++) {
+        answers[j] = {
+            answer: "Вариант ответа №" + (j + 1)
+        };
+    }
+
+    var content = tmpl(html, {
+        headTitle: title,
+        q_data: questions,
+        a_data: answers,
+        submitData: submitValue
+    });
+    $('body').append(content);
 
 });
