@@ -4,6 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Templating</title>
+    <link href='https://fonts.googleapis.com/css?family=Ubuntu:400,700' rel='stylesheet' type='text/css'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="js/tmpl.js"></script>
     <script src="js/script.js"></script>
 
@@ -12,8 +14,10 @@
 <body>
 
 	<script type="text/template" id="test">
-		
-
+		<% for (var i=0; i<data.length; i++) { %>
+			<h1><%= data[i].title %></h1>
+			<p><%= data[i].content %></p>
+		<% } %>
 
 	</script>
 
