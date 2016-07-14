@@ -2,23 +2,36 @@
 
 (function($) {
 
-	$.fn.modalbox = function() {
+    $.fn.modalbox = function() {
 
-		var $button = this;
-		var $body = $('body');
+        var $button = this;
+        var $body = $('body');
 
-		var $numQ = $('.list-group-item').length;
 
-		console.log('numQ = ', $numQ);
 
-		function showModal() {
-			var $modal = $('<div class="show-modal"><p>Test results:</p></div>');
-			$body.append($modal); 
-		}
+        function showModal(e) {
+            // Checking answers
+            var $numberOfQuestions = $('.list-group-item').length;
+            var correctAnswers = [1, 5, 6];
+            var $checking = $('.for-checking');
+            var countCorrectAnswers = 0;
 
-		$button.on('click', showModal);
+            for (var i = 0; i<correctAnswers.length; i++) {
+            	if ($checking[correctAnswers[i]].checked)
+            		countCorrectAnswers++;
+            }
 
-		return this;
-	};
+            console.log('correct', countCorrectAnswers);
+
+            var $modal = $('<div class="show-modal"><p>Test results:</p></div>');
+
+            e.preventDefault();
+            $body.append($modal);
+        }
+
+        $button.on('click', showModal);
+
+        return this;
+    };
 
 })(jQuery);
