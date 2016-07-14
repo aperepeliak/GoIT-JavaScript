@@ -12,15 +12,13 @@
     <link rel="stylesheet" href="css/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="js/tmpl.js"></script>
-    <script src="js/jquey.fancybox.js"></script>
+    <script src="js/jquey.modalbox.js"></script>
     <script src="js/toLocalStorage.js"></script>
     <script src="js/script.js"></script>
 </head>
 
 <body>
-
-
-	<script type="text/template" id="testQuiz">
+    <script type="text/template" id="testQuiz">
         <div class="container">
             <div class="page-header">
                 <h1 class="heading"><%= headTitle %></h1>
@@ -31,9 +29,9 @@
                         <li class="list-group-item">
                             <%= q_data[i].question %>
                                 <% for (var j = 0; j < a_data.length; j++) { %>
-                                    <div class="checkbox">
+                                    <div class="radio">
                                         <label>
-                                            <input type="checkbox">
+                                            <input type="radio" name="options<%= i %>" class="<%= 'a' + i + '.' + j %>">
                                             <span class="quiz__answer"><%= a_data[i][j].answer %></span>
                                         </label>
                                     </div>
@@ -41,11 +39,10 @@
                         </li>
                         <% } %>
                 </ul>
-                <input class="btn btn-primary" type="submit" value="<%= submitData %>">
+                <input class="btn btn-primary modalbox" type="submit" value="<%= submitData %>">
             </form>
         </div>
     </script>
-
 </body>
 
 </html>
