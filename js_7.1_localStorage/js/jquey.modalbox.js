@@ -23,7 +23,8 @@
 
             console.log('correct', countCorrectAnswers);
 
-            var $modal = $('<div class="show-modal"><p>Test results:</p></div>');
+            var $modal = $('<div class="show-modal"><p>Test results: ' + 
+            				countCorrectAnswers + '/' + $numberOfQuestions + '</p></div>');
 
             e.preventDefault();
             $body.append($modal);
