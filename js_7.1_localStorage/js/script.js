@@ -31,14 +31,6 @@ $(function() {
     });
     $('body').append(content);
 
-    
-
-
-    
-    
-
-
-
     $('.modalbox').modalbox();
 
 });

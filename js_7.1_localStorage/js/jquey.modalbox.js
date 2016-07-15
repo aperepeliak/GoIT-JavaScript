@@ -11,7 +11,6 @@
         var $modal;
         var $overlay;
 
-
         function showModal(e) {
             // Checking answers
             var $numberOfQuestions = $('.list-group-item').length;
@@ -26,29 +25,21 @@
 
             $tryAgain = $('<input class="btn btn-success tryAgain" type="submit" value="Пройти тест заново">');
 
-            // $modal = $('<div class="show-modal"><p>Your test result is: ' +
-            //     countCorrectAnswers + '/' + $numberOfQuestions + '</p></div>');
-
-            if (Math.round((countCorrectAnswers/$numberOfQuestions)*100) === 100) {
-            	$modal = $('<div class="show-modal"><p>Тест пройден!</p><p class="res">Результат: ' +
-                Math.round((countCorrectAnswers/$numberOfQuestions)*100) + '%' + '</p></div>');
+            if (Math.round((countCorrectAnswers / $numberOfQuestions) * 100) === 100) {
+                $modal = $('<div class="show-modal"><p>Тест пройден!</p><p class="res">Результат: ' +
+                    Math.round((countCorrectAnswers / $numberOfQuestions) * 100) + '%' + '</p></div>');
             } else {
-            	$modal = $('<div class="show-modal"><p>Тест не пройден!</p><p class="res">Результат: ' +
-                Math.round((countCorrectAnswers/$numberOfQuestions)*100) + '%' + '</p></div>');
+                $modal = $('<div class="show-modal"><p>Тест не пройден!</p><p class="res">Результат: ' +
+                    Math.round((countCorrectAnswers / $numberOfQuestions) * 100) + '%' + '</p></div>');
             }
 
-            
-
             $overlay = $('<div class="modal-overlay">');
-
             e.preventDefault();
-
             $body.append($overlay);
             $body.append($modal);
             $modal.append($tryAgain);
             $tryAgain.one('click', hideModal);
         }
-
 
         function hideModal() {
             for (var i = 0; i < $checking.length; i++) {
@@ -59,7 +50,6 @@
         }
 
         $button.on('click', showModal);
-
 
         return this;
     };

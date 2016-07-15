@@ -1,40 +1,39 @@
 body {
-	font-family: Ubuntu, Arial, sans-serif;
+    font-family: Ubuntu, Arial, sans-serif;
 }
 
 h1,
 li {
-	font-weight: bold;
+    font-weight: bold;
 }
 
 .show-modal {
-	display: flex;
-	justify-content: space-around;
-	align-items: center;
-	flex-direction: column;
-	position: absolute;
-	width: 400px;
-	height: 150px;
-	top: 50%;
-	left: 50%;
-	margin: -75px 0 0 -200px;
-	border: 5px solid #eee;
-	border-radius: 10px;
-	background-color: #E9B950;
-	/*font-weight: bold;*/
-	font-size: 24px;
-	color: #fff;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    width: 400px;
+    height: 150px;
+    top: 50%;
+    left: 50%;
+    margin: -75px 0 0 -200px;
+    border: 5px solid #eee;
+    border-radius: 10px;
+    background-color: #E9B950;
+    font-size: 24px;
+    color: #fff;
 }
 
 .modal-overlay {
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background-color: rgba(100,100,50,0.4);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(100, 100, 50, 0.4);
 }
 
 .res {
-	font-size: 16px;
+    font-size: 16px;
 }
