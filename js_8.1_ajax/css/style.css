@@ -12,3 +12,12 @@ ul li {
 	width: 175px;
 	text-align: center;
 }
+
+/*ul li a {
+	display: block;
+	transition: all 1s;
+}
+
+ul li a:hover {
+	border: 1px solid black;
+}*/
