@@ -1,7 +1,14 @@
 ul {
 	list-style: none;
+	display: flex;
+	flex-wrap: wrap;
 }
 
 ul li {
-	display: inline-block;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 175px;
+	width: 175px;
+	text-align: center;
 }

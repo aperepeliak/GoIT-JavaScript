@@ -17,7 +17,7 @@ $(function() {
     // });
 
     var API_KEY = '2957253-77eda47a6d8c06c5cf8269032';
-    var URL = "https://pixabay.com/api/?key=" + API_KEY + "&q=" + encodeURIComponent('js');
+    var URL = "https://pixabay.com/api/?key=" + API_KEY + "&q=" + encodeURIComponent('test');
     $.getJSON(URL, function(data) {
         var ul = document.createElement("ul");
         if (parseInt(data.totalHits) > 0) {
