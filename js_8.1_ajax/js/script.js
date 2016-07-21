@@ -23,7 +23,7 @@ $(function() {
         if (parseInt(data.totalHits) > 0) {
             $.each(data.hits, function(i, hit) {
                 var li = document.createElement("li");
-                var inner = '<img src="' + hit.previewURL + '">';
+                var inner = '<a href="' + hit.pageURL + '" target="_blank">  <img src="' + hit.previewURL + '"></a>';
                 li.innerHTML = inner;
                 ul.appendChild(li);
                 console.log('li', li);
