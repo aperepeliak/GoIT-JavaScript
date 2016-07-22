@@ -4,12 +4,12 @@ body {
 }
 
 header {
+    background-color: #FAFAFA;
+    border-bottom: 1px solid #EEE;
     left: 0;
     position: fixed;
     top: 0;
     width: 100%;
-    background-color: #FAFAFA;
-    border-bottom: 1px solid #EEE;
 }
 
 .custom-row {
@@ -35,14 +35,14 @@ ul {
 }
 
 ul li {
-    display: flex;
-    justify-content: center;
     align-items: center;
+    border: 5px solid #fff;
+    display: flex;
     height: 175px;
-    width: 175px;
+    justify-content: center;
     text-align: center;
     transition: all 500ms ease;
-    border: 5px solid #fff;
+    width: 175px;
 }
 
 ul li:hover {
