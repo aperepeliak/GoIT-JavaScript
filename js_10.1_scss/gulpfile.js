@@ -23,7 +23,7 @@ gulp.task('autoprefixer', function () {
 
 gulp.task('build', function (callback) {
    runSequence('clean:dist',
-        ['sass', 'useref', 'images'],
+        ['sass', 'autoprefixer', 'useref', 'images'],
         callback); 
 });
 
@@ -48,7 +48,7 @@ gulp.task('useref', function () {
 });
 
 gulp.task('sass', function() {
-    return gulp.src('app/scss/**/*.scss')
+    return gulp.src('app/scss/main.scss')
         .pipe(sass())
         .pipe(gulp.dest('app/css'))
         .pipe(browserSync.reload({
@@ -57,7 +57,7 @@ gulp.task('sass', function() {
 });
 
 gulp.task('watch', ['browserSync', 'sass'], function () {
-    gulp.watch('app/scss/**/*.scss', ['sass']);
+    gulp.watch('app/scss/main.scss', ['sass']);
     gulp.watch('app/*.html', browserSync.reload);
     gulp.watch('app/**/*.js', browserSync.reload);
     
