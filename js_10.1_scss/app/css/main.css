@@ -487,3 +487,10 @@ article .sprite-truck {
     background: url("../../images/sprite-brands.png") no-repeat -1009px 0;
     width: 143px;
     height: 62px; }
+
+.services > ul {
+  display: flex;
+  justify-content: space-between; }
+  .services > ul li {
+    display: flex;
+    flex-direction: column; }
