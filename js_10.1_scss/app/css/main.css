@@ -1,3 +1,5 @@
+@import url(https://fonts.googleapis.com/css?family=Ubuntu:500);
+@import url(https://fonts.googleapis.com/css?family=Ubuntu+Condensed);
 /*! normalize.css v4.1.1 | MIT License | github.com/necolas/normalize.css */
 /**
  * 1. Change the default font family in all browsers (opinionated).
@@ -364,6 +366,35 @@ textarea {
   font: inherit;
   /* 2 */ }
 
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0; }
+
+a {
+  text-decoration: none; }
+
+.logo-and-socials,
+.main-menu,
+.carousel-container,
+.features,
+.logo-and-socials,
+.services,
+.news-and-banners,
+.brands,
+footer {
+  padding: 0 calc(50% - 580px); }
+
+.main-menu,
+.features,
+.logo-and-socials {
+  display: flex;
+  justify-content: space-between; }
+
+.logo-and-socials {
+  height: 90px;
+  margin: 10px 0 10px 10px; }
+
 .socials ul {
   display: flex; }
   .socials ul > li {
@@ -371,20 +402,20 @@ textarea {
     padding: 5px; }
     .socials ul > li .facebook {
       display: block;
-      background: url("../../images/sprite-socials.png") no-repeat 0 0;
+      background: url("../../images/sprite-socials.png") no-repeat 5px 0;
       width: 17px;
       height: 16px; }
       .socials ul > li .facebook:hover {
-        background: url("../../images/sprite-socials.png") no-repeat 0 -24px;
+        background: url("../../images/sprite-socials.png") no-repeat 5px -24px;
         width: 17px;
         height: 16px; }
     .socials ul > li .twitter {
       display: block;
-      background: url("../../images/sprite-socials.png") no-repeat -30px -2px;
+      background: url("../../images/sprite-socials.png") no-repeat -30px -1px;
       width: 17px;
       height: 16px; }
       .socials ul > li .twitter:hover {
-        background: url("../../images/sprite-socials.png") no-repeat -30px -26px;
+        background: url("../../images/sprite-socials.png") no-repeat -30px -25px;
         width: 17px;
         height: 16px; }
     .socials ul > li .rss {
@@ -414,3 +445,45 @@ textarea {
         background: url("../../images/sprite-socials.png") no-repeat -129px -24px;
         width: 17px;
         height: 16px; }
+
+article .sprite-settings {
+  background: url("../../images/sprite-features.png") no-repeat 0 0;
+  width: 32px;
+  height: 32px; }
+
+article .sprite-params {
+  background: url("../../images/sprite-features.png") no-repeat -58px 0;
+  width: 32px;
+  height: 32px; }
+
+article .sprite-truck {
+  background: url("../../images/sprite-features.png") no-repeat -108px -6px;
+  width: 32px;
+  height: 26px; }
+
+.brands > ul {
+  list-style: none; }
+  .brands > ul .brand-1 {
+    background: url("../../images/sprite-brands.png") no-repeat 0 0;
+    width: 143px;
+    height: 62px; }
+  .brands > ul .brand-2 {
+    background: url("../../images/sprite-brands.png") no-repeat -190px -1px;
+    width: 143px;
+    height: 62px; }
+  .brands > ul .brand-3 {
+    background: url("../../images/sprite-brands.png") no-repeat -397px -1px;
+    width: 184px;
+    height: 64px; }
+  .brands > ul .brand-4 {
+    background: url("../../images/sprite-brands.png") no-repeat -628px -2px;
+    width: 143px;
+    height: 62px; }
+  .brands > ul .brand-5 {
+    background: url("../../images/sprite-brands.png") no-repeat -830px -2px;
+    width: 143px;
+    height: 62px; }
+  .brands > ul .brand-6 {
+    background: url("../../images/sprite-brands.png") no-repeat -1009px 0;
+    width: 143px;
+    height: 62px; }

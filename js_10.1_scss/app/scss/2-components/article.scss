@@ -1,0 +1,17 @@
+article {
+    .sprite-settings {
+        background: url('../../images/sprite-features.png') no-repeat 0 0;
+        width: 32px;
+        height: 32px;
+    }
+    .sprite-params {
+        background: url('../../images/sprite-features.png') no-repeat -58px 0;
+        width: 32px;
+        height: 32px;
+    }
+    .sprite-truck {
+        background: url('../../images/sprite-features.png') no-repeat -108px -6px;
+        width: 32px;
+        height: 26px;
+    }
+}

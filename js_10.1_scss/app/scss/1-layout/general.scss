@@ -1,0 +1,28 @@
+
+.logo-and-socials,
+.main-menu,
+.carousel-container,
+.features,
+.services,
+.news-and-banners,
+.brands,
+footer {
+    padding: 0 calc(50% - 580px);
+}
+
+.main-menu,
+.features {
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo-and-socials {
+    @extend .features;
+    height: 90px;
+    margin: 10px 0 10px 10px;
+}
+
+
+
+
+

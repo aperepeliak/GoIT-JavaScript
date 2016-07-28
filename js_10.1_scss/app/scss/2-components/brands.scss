@@ -1,0 +1,42 @@
+.brands {
+    > ul {
+
+        list-style: none;
+
+        .brand-1 {
+            background: url('../../images/sprite-brands.png') no-repeat 0 0;
+            width: 143px;
+            height: 62px;
+        }
+
+        .brand-2 {
+            background: url('../../images/sprite-brands.png') no-repeat -190px -1px;
+            width: 143px;
+            height: 62px;
+        }
+
+        .brand-3 {
+            background: url('../../images/sprite-brands.png') no-repeat -397px -1px;
+            width: 184px;
+            height: 64px;
+        }
+
+        .brand-4 {
+            background: url('../../images/sprite-brands.png') no-repeat -628px -2px;
+            width: 143px;
+            height: 62px;
+        }
+
+        .brand-5 {
+            background: url('../../images/sprite-brands.png') no-repeat -830px -2px;
+            width: 143px;
+            height: 62px;
+        }
+
+        .brand-6 {
+            background: url('../../images/sprite-brands.png') no-repeat -1009px 0;
+            width: 143px;
+            height: 62px;
+        }
+    }
+}
