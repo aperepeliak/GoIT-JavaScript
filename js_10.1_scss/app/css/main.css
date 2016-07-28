@@ -363,3 +363,54 @@ textarea {
   /* 1 */
   font: inherit;
   /* 2 */ }
+
+.socials ul {
+  display: flex; }
+  .socials ul > li {
+    list-style: none;
+    padding: 5px; }
+    .socials ul > li .facebook {
+      display: block;
+      background: url("../../images/sprite-socials.png") no-repeat 0 0;
+      width: 17px;
+      height: 16px; }
+      .socials ul > li .facebook:hover {
+        background: url("../../images/sprite-socials.png") no-repeat 0 -24px;
+        width: 17px;
+        height: 16px; }
+    .socials ul > li .twitter {
+      display: block;
+      background: url("../../images/sprite-socials.png") no-repeat -30px -2px;
+      width: 17px;
+      height: 16px; }
+      .socials ul > li .twitter:hover {
+        background: url("../../images/sprite-socials.png") no-repeat -30px -26px;
+        width: 17px;
+        height: 16px; }
+    .socials ul > li .rss {
+      display: block;
+      background: url("../../images/sprite-socials.png") no-repeat -64px -1px;
+      width: 17px;
+      height: 16px; }
+      .socials ul > li .rss:hover {
+        background: url("../../images/sprite-socials.png") no-repeat -64px -25px;
+        width: 17px;
+        height: 16px; }
+    .socials ul > li .linkedin {
+      display: block;
+      background: url("../../images/sprite-socials.png") no-repeat -96px 0;
+      width: 17px;
+      height: 16px; }
+      .socials ul > li .linkedin:hover {
+        background: url("../../images/sprite-socials.png") no-repeat -96px -24px;
+        width: 17px;
+        height: 16px; }
+    .socials ul > li .skype {
+      display: block;
+      background: url("../../images/sprite-socials.png") no-repeat -129px 0;
+      width: 17px;
+      height: 16px; }
+      .socials ul > li .skype:hover {
+        background: url("../../images/sprite-socials.png") no-repeat -129px -24px;
+        width: 17px;
+        height: 16px; }
