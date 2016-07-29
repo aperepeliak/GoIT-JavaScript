@@ -561,12 +561,68 @@ footer {
         width: 32px;
         height: 26px; }
 
-.services > ul {
+.services {
   display: flex;
-  justify-content: space-between; }
-  .services > ul li {
+  flex-direction: column;
+  justify-content: center;
+  background-color: #2a2d32; }
+  .services h2 {
+    font-family: "Ubuntu", Arial, sans-serif;
+    font-size: 24px;
+    color: #efeff0;
+    margin-bottom: 50px; }
+  .services ul {
     display: flex;
-    flex-direction: column; }
+    justify-content: space-between;
+    align-items: center; }
+    .services ul li {
+      height: 310px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center; }
+      .services ul li a {
+        font-family: "Ubuntu", Arial, sans-serif;
+        font-size: 16px;
+        color: #efeff0;
+        position: relative; }
+        .services ul li a .layer {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+          background-color: #248cec;
+          background-position: center;
+          opacity: 0;
+          transition: all 400ms ease-in-out; }
+      .services ul li .service-1 {
+        display: block;
+        width: 260px;
+        height: 260px;
+        background-image: url("../../images/services-1.png"); }
+      .services ul li .service-2 {
+        display: block;
+        width: 260px;
+        height: 260px;
+        background-image: url("../../images/services-2.png"); }
+      .services ul li .service-3 {
+        display: block;
+        width: 260px;
+        height: 260px;
+        background-image: url("../../images/services-3.png"); }
+      .services ul li .service-4 {
+        display: block;
+        width: 260px;
+        height: 260px;
+        background-image: url("../../images/services-4.png"); }
+      .services ul li:hover a {
+        color: #f4b60d; }
+        .services ul li:hover a .layer {
+          opacity: 0.9;
+          background-image: url("../../images/white-cross.png");
+          background-repeat: no-repeat;
+          background-position: center; }
 
 .brands ul {
   display: flex;
