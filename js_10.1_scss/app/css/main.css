@@ -515,20 +515,51 @@ footer {
         background-image: none;
         outline: none; }
 
-article .sprite-settings {
-  background: url("../../images/sprite-features.png") no-repeat 0 0;
-  width: 32px;
-  height: 32px; }
-
-article .sprite-params {
-  background: url("../../images/sprite-features.png") no-repeat -58px 0;
-  width: 32px;
-  height: 32px; }
-
-article .sprite-truck {
-  background: url("../../images/sprite-features.png") no-repeat -108px -6px;
-  width: 32px;
-  height: 26px; }
+.features {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+  .features article {
+    width: 360px;
+    display: flex; }
+    .features article .col-1 {
+      font-family: "Ubuntu", Arial, sans-serif;
+      color: #efeff0;
+      font-size: 90px;
+      margin-top: -20px; }
+    .features article .col-2 {
+      width: 240px;
+      margin-left: 15px; }
+      .features article .col-2 h3 {
+        font-family: "Ubuntu", Arial, sans-serif;
+        color: #2a2b2e;
+        font-size: 20px; }
+      .features article .col-2 p {
+        font-family: Arial, sans-serif;
+        color: #8a8a8a;
+        font-size: 13px; }
+      .features article .col-2 a {
+        display: block;
+        width: 85px;
+        font-family: "Ubuntu", Arial, sans-serif;
+        color: #2a2b2e;
+        font-size: 13px;
+        background: url("../../images/arrow.png") no-repeat right center; }
+        .features article .col-2 a:hover {
+          background: url("../../images/arrow-hover.png") no-repeat right center;
+          color: #248cec; }
+      .features article .col-2 .sprite-settings {
+        background: url("../../images/sprite-features.png") no-repeat 0 0;
+        width: 32px;
+        height: 32px; }
+      .features article .col-2 .sprite-params {
+        background: url("../../images/sprite-features.png") no-repeat -58px 0;
+        width: 32px;
+        height: 32px; }
+      .features article .col-2 .sprite-truck {
+        background: url("../../images/sprite-features.png") no-repeat -108px -6px;
+        width: 32px;
+        height: 26px; }
 
 .services > ul {
   display: flex;
