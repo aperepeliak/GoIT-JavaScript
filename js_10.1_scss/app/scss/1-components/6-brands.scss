@@ -1,7 +1,7 @@
 .brands {
-    > ul {
+    ul {
 
-        list-style: none;
+        @include hor-flex();
 
         .brand-1 {
             background: url('../../images/sprite-brands.png') no-repeat 0 0;

@@ -378,73 +378,142 @@ a {
 .main-menu,
 .carousel-container,
 .features,
-.logo-and-socials,
 .services,
 .news-and-banners,
 .brands,
 footer {
   padding: 0 calc(50% - 580px); }
 
-.main-menu,
-.features,
+.logo-and-socials {
+  height: 90px; }
+
+.main-menu {
+  height: 55px; }
+
+.carousel-container {
+  height: 580px; }
+
+.features {
+  height: 335px; }
+
+.services {
+  height: 495px; }
+
+.news-and-banners {
+  height: 540px; }
+
+.brands {
+  height: 240px; }
+
+footer {
+  height: 385px; }
+
 .logo-and-socials {
   display: flex;
-  justify-content: space-between; }
+  justify-content: space-between;
+  align-items: center; }
+  .logo-and-socials .logo {
+    padding-left: 5px; }
+  .logo-and-socials .socials ul {
+    display: flex; }
+    .logo-and-socials .socials ul li {
+      padding: 5px; }
+      .logo-and-socials .socials ul li .facebook {
+        display: block;
+        background: url("../../images/sprite-socials.png") no-repeat 5px 0;
+        width: 17px;
+        height: 16px; }
+        .logo-and-socials .socials ul li .facebook:hover {
+          background: url("../../images/sprite-socials.png") no-repeat 5px -24px;
+          width: 17px;
+          height: 16px; }
+      .logo-and-socials .socials ul li .twitter {
+        display: block;
+        background: url("../../images/sprite-socials.png") no-repeat -30px -1px;
+        width: 17px;
+        height: 16px; }
+        .logo-and-socials .socials ul li .twitter:hover {
+          background: url("../../images/sprite-socials.png") no-repeat -30px -25px;
+          width: 17px;
+          height: 16px; }
+      .logo-and-socials .socials ul li .rss {
+        display: block;
+        background: url("../../images/sprite-socials.png") no-repeat -64px -1px;
+        width: 17px;
+        height: 16px; }
+        .logo-and-socials .socials ul li .rss:hover {
+          background: url("../../images/sprite-socials.png") no-repeat -64px -25px;
+          width: 17px;
+          height: 16px; }
+      .logo-and-socials .socials ul li .linkedin {
+        display: block;
+        background: url("../../images/sprite-socials.png") no-repeat -96px 0;
+        width: 17px;
+        height: 16px; }
+        .logo-and-socials .socials ul li .linkedin:hover {
+          background: url("../../images/sprite-socials.png") no-repeat -96px -24px;
+          width: 17px;
+          height: 16px; }
+      .logo-and-socials .socials ul li .skype {
+        display: block;
+        background: url("../../images/sprite-socials.png") no-repeat -129px 0;
+        width: 17px;
+        height: 16px; }
+        .logo-and-socials .socials ul li .skype:hover {
+          background: url("../../images/sprite-socials.png") no-repeat -129px -24px;
+          width: 17px;
+          height: 16px; }
 
-.logo-and-socials {
-  height: 90px;
-  margin: 10px 0 10px 10px; }
-
-.socials ul {
-  display: flex; }
-  .socials ul > li {
-    list-style: none;
-    padding: 5px; }
-    .socials ul > li .facebook {
-      display: block;
-      background: url("../../images/sprite-socials.png") no-repeat 5px 0;
-      width: 17px;
-      height: 16px; }
-      .socials ul > li .facebook:hover {
-        background: url("../../images/sprite-socials.png") no-repeat 5px -24px;
-        width: 17px;
-        height: 16px; }
-    .socials ul > li .twitter {
-      display: block;
-      background: url("../../images/sprite-socials.png") no-repeat -30px -1px;
-      width: 17px;
-      height: 16px; }
-      .socials ul > li .twitter:hover {
-        background: url("../../images/sprite-socials.png") no-repeat -30px -25px;
-        width: 17px;
-        height: 16px; }
-    .socials ul > li .rss {
-      display: block;
-      background: url("../../images/sprite-socials.png") no-repeat -64px -1px;
-      width: 17px;
-      height: 16px; }
-      .socials ul > li .rss:hover {
-        background: url("../../images/sprite-socials.png") no-repeat -64px -25px;
-        width: 17px;
-        height: 16px; }
-    .socials ul > li .linkedin {
-      display: block;
-      background: url("../../images/sprite-socials.png") no-repeat -96px 0;
-      width: 17px;
-      height: 16px; }
-      .socials ul > li .linkedin:hover {
-        background: url("../../images/sprite-socials.png") no-repeat -96px -24px;
-        width: 17px;
-        height: 16px; }
-    .socials ul > li .skype {
-      display: block;
-      background: url("../../images/sprite-socials.png") no-repeat -129px 0;
-      width: 17px;
-      height: 16px; }
-      .socials ul > li .skype:hover {
-        background: url("../../images/sprite-socials.png") no-repeat -129px -24px;
-        width: 17px;
-        height: 16px; }
+.main-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+  .main-menu ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 580px;
+    height: 100%;
+    background-color: #2a2d32; }
+    .main-menu ul li {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      justify-content: center;
+      width: 115px;
+      height: 100%;
+      border-right: 1px solid #181a1d; }
+      .main-menu ul li a {
+        color: #fff;
+        font-family: "Ubuntu Condensed", Arial, sans-serif;
+        font-size: 14px; }
+        .main-menu ul li a:hover {
+          color: #f4b60d; }
+      .main-menu ul li:first-child {
+        background-color: #248cec; }
+  .main-menu .search {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    justify-content: flex-end;
+    width: 580px;
+    height: 100%;
+    padding-right: 8px;
+    background-color: #2a2d32; }
+    .main-menu .search input {
+      padding-left: 10px;
+      color: rgba(255, 255, 255, 0.7);
+      font-family: Arial, sans-serif;
+      font-size: 12px;
+      height: 38px;
+      width: 240px;
+      background-color: #35383c;
+      background: url("../../images/search.png") no-repeat 220px center;
+      border: 1px solid #181a1d; }
+      .main-menu .search input:focus {
+        background-color: #248cec;
+        background-image: none;
+        outline: none; }
 
 article .sprite-settings {
   background: url("../../images/sprite-features.png") no-repeat 0 0;
@@ -461,36 +530,38 @@ article .sprite-truck {
   width: 32px;
   height: 26px; }
 
-.brands > ul {
-  list-style: none; }
-  .brands > ul .brand-1 {
-    background: url("../../images/sprite-brands.png") no-repeat 0 0;
-    width: 143px;
-    height: 62px; }
-  .brands > ul .brand-2 {
-    background: url("../../images/sprite-brands.png") no-repeat -190px -1px;
-    width: 143px;
-    height: 62px; }
-  .brands > ul .brand-3 {
-    background: url("../../images/sprite-brands.png") no-repeat -397px -1px;
-    width: 184px;
-    height: 64px; }
-  .brands > ul .brand-4 {
-    background: url("../../images/sprite-brands.png") no-repeat -628px -2px;
-    width: 143px;
-    height: 62px; }
-  .brands > ul .brand-5 {
-    background: url("../../images/sprite-brands.png") no-repeat -830px -2px;
-    width: 143px;
-    height: 62px; }
-  .brands > ul .brand-6 {
-    background: url("../../images/sprite-brands.png") no-repeat -1009px 0;
-    width: 143px;
-    height: 62px; }
-
 .services > ul {
   display: flex;
   justify-content: space-between; }
   .services > ul li {
     display: flex;
     flex-direction: column; }
+
+.brands ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+  .brands ul .brand-1 {
+    background: url("../../images/sprite-brands.png") no-repeat 0 0;
+    width: 143px;
+    height: 62px; }
+  .brands ul .brand-2 {
+    background: url("../../images/sprite-brands.png") no-repeat -190px -1px;
+    width: 143px;
+    height: 62px; }
+  .brands ul .brand-3 {
+    background: url("../../images/sprite-brands.png") no-repeat -397px -1px;
+    width: 184px;
+    height: 64px; }
+  .brands ul .brand-4 {
+    background: url("../../images/sprite-brands.png") no-repeat -628px -2px;
+    width: 143px;
+    height: 62px; }
+  .brands ul .brand-5 {
+    background: url("../../images/sprite-brands.png") no-repeat -830px -2px;
+    width: 143px;
+    height: 62px; }
+  .brands ul .brand-6 {
+    background: url("../../images/sprite-brands.png") no-repeat -1009px 0;
+    width: 143px;
+    height: 62px; }
