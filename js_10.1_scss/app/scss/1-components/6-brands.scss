@@ -1,6 +1,7 @@
 .brands {
-    ul {
 
+    ul {
+        height: 100%;
         @include hor-flex();
 
         .brand-1 {
