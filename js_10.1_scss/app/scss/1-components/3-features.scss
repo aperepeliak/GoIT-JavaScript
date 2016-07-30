@@ -35,6 +35,7 @@
                 font-family: $header-font;
                 color: $headers-black;
                 font-size: 13px;
+                text-shadow: rgba(0,0,0, 0.3) 0 0 1px;
                 background: url('../../images/arrow.png') no-repeat right center;
                 &:hover {
                     background: url('../../images/arrow-hover.png') no-repeat right center;

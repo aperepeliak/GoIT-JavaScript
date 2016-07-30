@@ -26,6 +26,7 @@
                 font-size: 16px;
                 color: $nums-grey;
                 position: relative;
+                text-shadow: rgba(255,255,255, 0.4) 0 0 1px;
                 
                 .layer {
                     position: absolute;
@@ -78,11 +79,7 @@
                         background-repeat: no-repeat;
                         background-position: center;
                     }
-               } 
-               
-               
-               
-               
+               }            
            }
        }
    } 

@@ -544,6 +544,7 @@ footer {
         font-family: "Ubuntu", Arial, sans-serif;
         color: #2a2b2e;
         font-size: 13px;
+        text-shadow: rgba(0, 0, 0, 0.3) 0 0 1px;
         background: url("../../images/arrow.png") no-repeat right center; }
         .features article .col-2 a:hover {
           background: url("../../images/arrow-hover.png") no-repeat right center;
@@ -585,7 +586,8 @@ footer {
         font-family: "Ubuntu", Arial, sans-serif;
         font-size: 16px;
         color: #efeff0;
-        position: relative; }
+        position: relative;
+        text-shadow: rgba(255, 255, 255, 0.4) 0 0 1px; }
         .services ul li a .layer {
           position: absolute;
           width: 100%;
@@ -623,6 +625,88 @@ footer {
           background-image: url("../../images/white-cross.png");
           background-repeat: no-repeat;
           background-position: center; }
+
+.news-and-banners {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f7f7f7; }
+  .news-and-banners .news {
+    width: 49%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+    .news-and-banners .news h2 {
+      font-family: "Ubuntu", Arial, sans-serif;
+      font-size: 24px;
+      color: #2a2b2e;
+      margin-bottom: 50px; }
+    .news-and-banners .news article {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 30px; }
+      .news-and-banners .news article .visual {
+        width: 150px;
+        height: 150px;
+        position: relative; }
+        .news-and-banners .news article .visual .month {
+          position: absolute;
+          width: 40px;
+          height: 40px;
+          top: 12px;
+          left: -20px;
+          color: #fff;
+          background-color: #248cec;
+          font-family: "Ubuntu", Arial, sans-serif;
+          font-size: 15px;
+          display: flex;
+          justify-content: center;
+          align-items: center; }
+        .news-and-banners .news article .visual .day {
+          position: absolute;
+          width: 40px;
+          height: 40px;
+          top: 52px;
+          left: -20px;
+          background-color: #f4b60d;
+          font-family: "Ubuntu", Arial, sans-serif;
+          font-size: 15px;
+          color: #2a2b2e;
+          display: flex;
+          justify-content: center;
+          align-items: center; }
+      .news-and-banners .news article .info {
+        width: 380px; }
+        .news-and-banners .news article .info h4 {
+          font-family: "Ubuntu", Arial, sans-serif;
+          font-size: 16px;
+          color: #2a2b2e;
+          margin: 0;
+          text-shadow: rgba(0, 0, 0, 0.2) 0 0 1px; }
+        .news-and-banners .news article .info p {
+          font-family: Arial, sans-serif;
+          font-size: 13px;
+          color: #8a8a8a;
+          margin-top: 5px;
+          margin-bottom: 20px; }
+          .news-and-banners .news article .info p span {
+            color: #0187f4;
+            text-shadow: rgba(36, 140, 236, 0.3) 0 0 1px; }
+  .news-and-banners .banners {
+    width: 49%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+    .news-and-banners .banners h2 {
+      font-family: "Ubuntu", Arial, sans-serif;
+      font-size: 24px;
+      color: #2a2b2e;
+      margin-bottom: 50px; }
+    .news-and-banners .banners .accordion-container {
+      height: 360px; }
 
 .brands ul {
   display: flex;

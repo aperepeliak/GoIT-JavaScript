@@ -1,0 +1,107 @@
+.news-and-banners {
+    @include hor-flex();
+    background-color: $news-bg-grey;
+
+    .news {
+        width: 49%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        h2 {
+            font-family: $header-font;
+            font-size: 24px;
+            color: $headers-black;
+            margin-bottom: 50px;
+        }
+
+        article {
+            @include hor-flex();
+            margin-bottom: 30px;
+
+            .visual {
+                width: 150px;
+                height: 150px;
+                position: relative;
+
+                .month {
+                    position: absolute;
+                    width: 40px;
+                    height: 40px;
+                    top: 12px;
+                    left: -20px;
+                    color: #fff;
+                    background-color: $active-blue;
+                    font-family: $header-font;
+                    font-size: 15px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;    
+                }
+
+                .day {
+                    position: absolute;
+                    width: 40px;
+                    height: 40px;
+                    top: 52px;
+                    left: -20px;
+                    
+                    background-color: $hover-yellow;
+                    font-family: $header-font;
+                    font-size: 15px;
+                    color: $headers-black;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;    
+                }
+            }
+
+            .info {
+                width: 380px;
+
+                h4 {
+                    font-family: $header-font;
+                    font-size: 16px;
+                    color: $headers-black;
+                    margin: 0;
+                    text-shadow: rgba(0,0,0, 0.2) 0 0 1px;
+                }
+
+                p {
+                    font-family: $text-font;
+                    font-size: 13px;
+                    color: $parag-grey;
+                    margin-top: 5px;
+                    margin-bottom: 20px;
+
+                    span {
+                        color: $comments-blue;
+                        text-shadow: rgba(36,140,236, 0.3) 0 0 1px;
+                    }
+                }
+            }
+        }
+    }
+
+    .banners {
+        width: 49%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        h2 {
+            font-family: $header-font;
+            font-size: 24px;
+            color: $headers-black;
+            margin-bottom: 50px;
+        }
+
+        .accordion-container {
+            height: 360px;
+        }
+
+
+    }
+}
