@@ -394,7 +394,7 @@ footer {
   height: 580px; }
 
 .features {
-  height: 335px; }
+  height: 260px; }
 
 .services {
   height: 495px; }
@@ -515,10 +515,53 @@ footer {
         background-image: none;
         outline: none; }
 
-.features {
+.carousel-container {
   display: flex;
   justify-content: space-between;
-  align-items: center; }
+  align-items: center;
+  /*Carousel styling*/ }
+  .carousel-container .jcarousel {
+    width: 1160px;
+    position: relative;
+    overflow: hidden; }
+  .carousel-container .jcarousel ul {
+    width: 20000em;
+    position: relative;
+    list-style: none;
+    margin: 0;
+    padding: 0; }
+  .carousel-container .jcarousel li {
+    float: left; }
+  .carousel-container .jcarousel-pagination {
+    position: absolute;
+    top: 420px;
+    left: 45%;
+    width: 80px;
+    height: 40px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center; }
+  .carousel-container .jcarousel-pagination a {
+    padding: 0;
+    background-color: #fff;
+    width: 16px;
+    height: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 300ms ease-in; }
+    .carousel-container .jcarousel-pagination a .pages {
+      opacity: 0;
+      transition: all 200ms ease-out; }
+    .carousel-container .jcarousel-pagination a .active {
+      opacity: 1; }
+  .carousel-container .jcarousel-pagination a:hover .pages,
+  .carousel-container .jcarousel-pagination a:focus .pages {
+    opacity: 1; }
+
+.features {
+  display: flex;
+  justify-content: space-between; }
   .features article {
     width: 360px;
     display: flex; }

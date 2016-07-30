@@ -1,6 +1,8 @@
 .features {
-    @include hor-flex();
+    display: flex;
+    justify-content: space-between;
 
+    
     article {
 
         width: 360px;

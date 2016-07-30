@@ -27,13 +27,11 @@ footer {
             font-family: $text-font;
             font-size: 13px;
             color: rgba(255,255,255, 0.3);
-            &:hover {
-                color: $active-blue;
+                &:hover {
+                    color: $active-blue;
+                }
             }
-            }
-        }
-
-        
+        }  
     }
 
     section {
@@ -73,7 +71,4 @@ footer {
             }
         }
     }
-    
-
-
 }
