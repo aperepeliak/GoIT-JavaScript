@@ -45,7 +45,7 @@
             height: 38px;
             width: 240px;
             background-color: $search-grey;
-            background: url('../../images/search.png') no-repeat 220px center;
+            background: url('../images/search.png') no-repeat 220px center;
             border: 1px solid $border-right;
             &:focus {
                 background-color: $active-blue;

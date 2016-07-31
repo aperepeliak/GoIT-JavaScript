@@ -1,5 +1,5 @@
 footer {
-    background-image: url('../../images/footer-bg.png');
+    background-image: url('../images/footer-bg.png');
 
     nav {
 
@@ -51,7 +51,7 @@ footer {
                 display: inline-block;
                 height: 17px;
                 padding-left: 20px;
-                background: url('../../images/location.png') no-repeat 0 0;
+                background: url('../images/location.png') no-repeat 0 0;
             }
 
             .phone {
@@ -59,7 +59,7 @@ footer {
                 height: 17px;
                 padding-left: 15px;
                 margin-left: 30px;
-                background: url('../../images/phone.png') no-repeat 0 0;
+                background: url('../images/phone.png') no-repeat 0 0;
             }
 
             .email {
@@ -67,7 +67,7 @@ footer {
                 height: 17px;
                 padding-left: 25px;
                 margin-left: 30px;
-                background: url('../../images/email.png') no-repeat 0 0;
+                background: url('../images/email.png') no-repeat 0 0;
             }
         }
     }

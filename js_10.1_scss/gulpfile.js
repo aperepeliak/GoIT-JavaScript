@@ -35,7 +35,8 @@ gulp.task('clean:dist', function () {
 gulp.task('images', function () {
     return gulp.src('app/images/**/*.+(png|jpg|jpeg|gif|svg)')
         .pipe(cache(imagemin({
-            interlaced:true
+            progressive: true,
+            interlaced: true
          })))
          .pipe(gulp.dest('dist/images'));
 });
@@ -44,7 +45,7 @@ gulp.task('useref', function () {
     return gulp.src('app/*.html')
         .pipe(useref())
         .pipe(gulpIf('*.js', uglify()))
-        .pipe(replace('url("../../', 'url("../'))
+        // .pipe(replace('url("../../', 'url("../'))
         .pipe(gulpIf('*.css', cssnano()))
         .pipe(gulp.dest('dist'));
 });

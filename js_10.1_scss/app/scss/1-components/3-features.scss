@@ -38,25 +38,25 @@
                 color: $headers-black;
                 font-size: 13px;
                 text-shadow: rgba(0,0,0, 0.3) 0 0 1px;
-                background: url('../../images/arrow.png') no-repeat right center;
+                background: url('../images/arrow.png') no-repeat right center;
                 &:hover {
-                    background: url('../../images/arrow-hover.png') no-repeat right center;
+                    background: url('../images/arrow-hover.png') no-repeat right center;
                     color: $active-blue;
                 }
             }
 
             .sprite-settings {
-                background: url('../../images/sprite-features.png') no-repeat 0 0;
+                background: url('../images/sprite-features.png') no-repeat 0 0;
                 width: 32px;
                 height: 32px;
             }
             .sprite-params {
-                background: url('../../images/sprite-features.png') no-repeat -58px 0;
+                background: url('../images/sprite-features.png') no-repeat -58px 0;
                 width: 32px;
                 height: 32px;
             }
             .sprite-truck {
-                background: url('../../images/sprite-features.png') no-repeat -108px -6px;
+                background: url('../images/sprite-features.png') no-repeat -108px -6px;
                 width: 32px;
                 height: 26px;
             }

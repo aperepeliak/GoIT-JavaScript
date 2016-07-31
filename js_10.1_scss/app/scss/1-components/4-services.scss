@@ -45,28 +45,28 @@
                display: block;
                width: 260px;
                height: 260px;
-               background-image: url('../../images/services-1.png');
+               background-image: url('../images/services-1.png');
             
             }
             .service-2 {
                display: block;
                width: 260px;
                height: 260px;
-               background-image: url('../../images/services-2.png');
+               background-image: url('../images/services-2.png');
             
             }
             .service-3 {
                display: block;
                width: 260px;
                height: 260px;
-               background-image: url('../../images/services-3.png');
+               background-image: url('../images/services-3.png');
             
             }
             .service-4 {
                display: block;
                width: 260px;
                height: 260px;
-               background-image: url('../../images/services-4.png');
+               background-image: url('../images/services-4.png');
             
             }
 
@@ -75,7 +75,7 @@
                    color: $hover-yellow;
                    .layer {
                         opacity: 0.9;
-                        background-image: url('../../images/white-cross.png');
+                        background-image: url('../images/white-cross.png');
                         background-repeat: no-repeat;
                         background-position: center;
                     }

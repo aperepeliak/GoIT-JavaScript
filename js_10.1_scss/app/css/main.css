@@ -420,47 +420,47 @@ footer {
       padding: 5px; }
       .logo-and-socials .socials ul li .facebook {
         display: block;
-        background: url("../../images/sprite-socials.png") no-repeat 5px 0;
+        background: url("../images/sprite-socials.png") no-repeat 5px 0;
         width: 17px;
         height: 16px; }
         .logo-and-socials .socials ul li .facebook:hover {
-          background: url("../../images/sprite-socials.png") no-repeat 5px -24px;
+          background: url("../images/sprite-socials.png") no-repeat 5px -24px;
           width: 17px;
           height: 16px; }
       .logo-and-socials .socials ul li .twitter {
         display: block;
-        background: url("../../images/sprite-socials.png") no-repeat -30px -1px;
+        background: url("../images/sprite-socials.png") no-repeat -30px -1px;
         width: 17px;
         height: 16px; }
         .logo-and-socials .socials ul li .twitter:hover {
-          background: url("../../images/sprite-socials.png") no-repeat -30px -25px;
+          background: url("../images/sprite-socials.png") no-repeat -30px -25px;
           width: 17px;
           height: 16px; }
       .logo-and-socials .socials ul li .rss {
         display: block;
-        background: url("../../images/sprite-socials.png") no-repeat -64px -1px;
+        background: url("../images/sprite-socials.png") no-repeat -64px -1px;
         width: 17px;
         height: 16px; }
         .logo-and-socials .socials ul li .rss:hover {
-          background: url("../../images/sprite-socials.png") no-repeat -64px -25px;
+          background: url("../images/sprite-socials.png") no-repeat -64px -25px;
           width: 17px;
           height: 16px; }
       .logo-and-socials .socials ul li .linkedin {
         display: block;
-        background: url("../../images/sprite-socials.png") no-repeat -96px 0;
+        background: url("../images/sprite-socials.png") no-repeat -96px 0;
         width: 17px;
         height: 16px; }
         .logo-and-socials .socials ul li .linkedin:hover {
-          background: url("../../images/sprite-socials.png") no-repeat -96px -24px;
+          background: url("../images/sprite-socials.png") no-repeat -96px -24px;
           width: 17px;
           height: 16px; }
       .logo-and-socials .socials ul li .skype {
         display: block;
-        background: url("../../images/sprite-socials.png") no-repeat -129px 0;
+        background: url("../images/sprite-socials.png") no-repeat -129px 0;
         width: 17px;
         height: 16px; }
         .logo-and-socials .socials ul li .skype:hover {
-          background: url("../../images/sprite-socials.png") no-repeat -129px -24px;
+          background: url("../images/sprite-socials.png") no-repeat -129px -24px;
           width: 17px;
           height: 16px; }
 
@@ -508,7 +508,7 @@ footer {
       height: 38px;
       width: 240px;
       background-color: #35383c;
-      background: url("../../images/search.png") no-repeat 220px center;
+      background: url("../images/search.png") no-repeat 220px center;
       border: 1px solid #181a1d; }
       .main-menu .search input:focus {
         background-color: #248cec;
@@ -531,6 +531,8 @@ footer {
     margin: 0;
     padding: 0; }
   .carousel-container .jcarousel li {
+    left: 0;
+    top: 0;
     float: left; }
   .carousel-container .jcarousel-pagination {
     position: absolute;
@@ -555,9 +557,10 @@ footer {
       transition: all 200ms ease-out; }
     .carousel-container .jcarousel-pagination a .active {
       opacity: 1; }
-  .carousel-container .jcarousel-pagination a:hover .pages,
-  .carousel-container .jcarousel-pagination a:focus .pages {
-    opacity: 1; }
+    .carousel-container .jcarousel-pagination a:hover .pages {
+      opacity: 1; }
+    .carousel-container .jcarousel-pagination a:focus .pages {
+      opacity: 1; }
 
 .features {
   display: flex;
@@ -588,20 +591,20 @@ footer {
         color: #2a2b2e;
         font-size: 13px;
         text-shadow: rgba(0, 0, 0, 0.3) 0 0 1px;
-        background: url("../../images/arrow.png") no-repeat right center; }
+        background: url("../images/arrow.png") no-repeat right center; }
         .features article .col-2 a:hover {
-          background: url("../../images/arrow-hover.png") no-repeat right center;
+          background: url("../images/arrow-hover.png") no-repeat right center;
           color: #248cec; }
       .features article .col-2 .sprite-settings {
-        background: url("../../images/sprite-features.png") no-repeat 0 0;
+        background: url("../images/sprite-features.png") no-repeat 0 0;
         width: 32px;
         height: 32px; }
       .features article .col-2 .sprite-params {
-        background: url("../../images/sprite-features.png") no-repeat -58px 0;
+        background: url("../images/sprite-features.png") no-repeat -58px 0;
         width: 32px;
         height: 32px; }
       .features article .col-2 .sprite-truck {
-        background: url("../../images/sprite-features.png") no-repeat -108px -6px;
+        background: url("../images/sprite-features.png") no-repeat -108px -6px;
         width: 32px;
         height: 26px; }
 
@@ -645,27 +648,27 @@ footer {
         display: block;
         width: 260px;
         height: 260px;
-        background-image: url("../../images/services-1.png"); }
+        background-image: url("../images/services-1.png"); }
       .services ul li .service-2 {
         display: block;
         width: 260px;
         height: 260px;
-        background-image: url("../../images/services-2.png"); }
+        background-image: url("../images/services-2.png"); }
       .services ul li .service-3 {
         display: block;
         width: 260px;
         height: 260px;
-        background-image: url("../../images/services-3.png"); }
+        background-image: url("../images/services-3.png"); }
       .services ul li .service-4 {
         display: block;
         width: 260px;
         height: 260px;
-        background-image: url("../../images/services-4.png"); }
+        background-image: url("../images/services-4.png"); }
       .services ul li:hover a {
         color: #f4b60d; }
         .services ul li:hover a .layer {
           opacity: 0.9;
-          background-image: url("../../images/white-cross.png");
+          background-image: url("../images/white-cross.png");
           background-repeat: no-repeat;
           background-position: center; }
 
@@ -757,32 +760,32 @@ footer {
   justify-content: space-between;
   align-items: center; }
   .brands ul .brand-1 {
-    background: url("../../images/sprite-brands.png") no-repeat 0 0;
+    background: url("../images/sprite-brands.png") no-repeat 0 0;
     width: 143px;
     height: 62px; }
   .brands ul .brand-2 {
-    background: url("../../images/sprite-brands.png") no-repeat -190px -1px;
+    background: url("../images/sprite-brands.png") no-repeat -190px -1px;
     width: 143px;
     height: 62px; }
   .brands ul .brand-3 {
-    background: url("../../images/sprite-brands.png") no-repeat -397px -1px;
+    background: url("../images/sprite-brands.png") no-repeat -397px -1px;
     width: 184px;
     height: 64px; }
   .brands ul .brand-4 {
-    background: url("../../images/sprite-brands.png") no-repeat -628px -2px;
+    background: url("../images/sprite-brands.png") no-repeat -628px -2px;
     width: 143px;
     height: 62px; }
   .brands ul .brand-5 {
-    background: url("../../images/sprite-brands.png") no-repeat -830px -2px;
+    background: url("../images/sprite-brands.png") no-repeat -830px -2px;
     width: 143px;
     height: 62px; }
   .brands ul .brand-6 {
-    background: url("../../images/sprite-brands.png") no-repeat -1009px 0;
+    background: url("../images/sprite-brands.png") no-repeat -1009px 0;
     width: 143px;
     height: 62px; }
 
 footer {
-  background-image: url("../../images/footer-bg.png"); }
+  background-image: url("../images/footer-bg.png"); }
   footer nav {
     display: flex;
     justify-content: space-between;
@@ -824,16 +827,16 @@ footer {
         display: inline-block;
         height: 17px;
         padding-left: 20px;
-        background: url("../../images/location.png") no-repeat 0 0; }
+        background: url("../images/location.png") no-repeat 0 0; }
       footer section address .phone {
         display: inline-block;
         height: 17px;
         padding-left: 15px;
         margin-left: 30px;
-        background: url("../../images/phone.png") no-repeat 0 0; }
+        background: url("../images/phone.png") no-repeat 0 0; }
       footer section address .email {
         display: inline-block;
         height: 17px;
         padding-left: 25px;
         margin-left: 30px;
-        background: url("../../images/email.png") no-repeat 0 0; }
+        background: url("../images/email.png") no-repeat 0 0; }
