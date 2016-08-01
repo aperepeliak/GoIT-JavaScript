@@ -7,7 +7,7 @@ function Human(config) {
 }
 
 function Worker(config) {
-    Human.apply(this, config);
+    Human.apply(this, [config]);
     this.workPlace = config.workPlace;
     this.salary = config.salary;
 }
@@ -20,7 +20,7 @@ Worker.prototype.work = function() {
 };
 
 function Student(config) {
-    Human.apply(this, config);
+    Human.apply(this, [config]);
     this.studyPlace = config.studyPlace;
     this.allowance = config.allowance;
 }
@@ -52,15 +52,35 @@ var chris = {
     salary: 1700
 };
 
+var anna = {
+    name: 'Anna',
+    age: 21,
+    gender: 'female',
+    height: 175,
+    weight: 68,
+    studyPlace: 'KPI',
+    salary: 150
+};
+
+var julia = {
+    name: 'Julia',
+    age: 22,
+    gender: 'female',
+    height: 185,
+    weight: 72,
+    studyPlace: 'HNURE',
+    salary: 170
+};
+
 var engineer = new Worker(john);
 var sales = new Worker(chris);
-// var bachelor = new Student('Anna', 21, 'female', 175, 68, 'KPI', 150);
-// var master = new Student('Julia', 22, 'female', 185, 72, 'HNURE', 170);
+var bachelor = new Student(anna);
+var master = new Student(julia);
 
 console.log('engineer = ', engineer);
 console.log('sales = ', sales);
-// console.log('bachelor = ', bachelor);
-// console.log('master = ', master);
+console.log('bachelor = ', bachelor);
+console.log('master = ', master);
 
 engineer.work();
-// master.watchTVseries();
+master.watchTVseries();
