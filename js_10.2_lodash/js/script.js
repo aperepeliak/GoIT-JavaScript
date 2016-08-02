@@ -275,12 +275,6 @@ var objArray =
   }
 ];
 
-console.log(objArray);
-
-_.each(objArray, function() {
-  console.log('test');
-});
-
 // Выборка по полю "skills"
 var mapSkills = _.map(objArray, 'skills');
 
