@@ -12,8 +12,7 @@ gulp.task('watch', ['browserSync'], function () {
 });
 
 gulp.task('jasmine', () =>
-    gulp.src('js/spec.js')
-        // gulp-jasmine works on filepaths so you can't have any plugins before it 
+    gulp.src('js/spec.js') 
         .pipe(jasmine())
 );
 
