@@ -86,7 +86,7 @@ $(function () {
 
     $('.modalbox').modalbox();
 });
-'use strict';
+"use strict";
 
 var numQuestions = 3;
 var numAnswers = 3;
@@ -113,9 +113,9 @@ answers[2][0] = { "answer": "Брендан Эйх" };
 answers[2][1] = { "answer": "Гвидо ван Россум" };
 answers[2][2] = { "answer": "Павел Дуров" };
 
-for (var i = 0; i < numQuestions; i++) {
-    localStorage.setItem('q' + (i + 1), JSON.stringify(questions[i]));
+for (var _i = 0; _i < numQuestions; _i++) {
+    localStorage.setItem("q" + (_i + 1), JSON.stringify(questions[_i]));
     for (var j = 0; j < numAnswers; j++) {
-        localStorage.setItem('a' + (i + 1) + '.' + (j + 1), JSON.stringify(answers[i][j]));
+        localStorage.setItem("a" + (_i + 1) + "." + (j + 1), JSON.stringify(answers[_i][j]));
     }
 }
