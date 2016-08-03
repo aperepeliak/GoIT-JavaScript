@@ -2,33 +2,31 @@
 
     $.fn.modalbox = function() {
 
-        var $button = this;
-        var $body = $('body');
-        var $checking;
-        var $tryAgain;
-        var $modal;
-        var $overlay;
+        let $button = this;
+        let $body = $('body');
+        let $checking;
+        let $tryAgain;
+        let $modal;
+        let $overlay;
 
-        function showModal(e) {
+        let showModal = (e) => {
             // Checking answers
-            var $numberOfQuestions = $('.list-group-item').length;
-            var correctAnswers = [1, 5, 6];
+            const $numberOfQuestions = $('.list-group-item').length;
+            const correctAnswers = [1, 5, 6];
             $checking = $('.for-checking');
-            var countCorrectAnswers = 0;
+            let countCorrectAnswers = 0;
 
-            for (var i = 0; i < correctAnswers.length; i++) {
+            for (let i = 0; i < correctAnswers.length; i++) {
                 if ($checking[correctAnswers[i]].checked)
                     countCorrectAnswers++;
             }
 
-            $tryAgain = $('<input class="btn btn-success tryAgain" type="submit" value="Пройти тест заново">');
+            $tryAgain = $(`<input class="btn btn-success tryAgain" type="submit" value="Пройти тест заново">`);
 
             if (Math.round((countCorrectAnswers / $numberOfQuestions) * 100) === 100) {
-                $modal = $('<div class="show-modal"><p>Тест пройден!</p><p class="res">Результат: ' +
-                    Math.round((countCorrectAnswers / $numberOfQuestions) * 100) + '%' + '</p></div>');
+                $modal = $(`<div class="show-modal"><p>Тест пройден!</p><p class="res">Результат: ${Math.round((countCorrectAnswers / $numberOfQuestions) * 100)}%</p></div>`);
             } else {
-                $modal = $('<div class="show-modal"><p>Тест не пройден!</p><p class="res">Результат: ' +
-                    Math.round((countCorrectAnswers / $numberOfQuestions) * 100) + '%' + '</p></div>');
+                $modal = $(`<div class="show-modal"><p>Тест не пройден!</p><p class="res">Результат: ${Math.round((countCorrectAnswers / $numberOfQuestions) * 100)}%</p></div>`);
             }
 
             $overlay = $('<div class="modal-overlay">');
@@ -39,8 +37,8 @@
             $tryAgain.one('click', hideModal);
         }
 
-        function hideModal() {
-            for (var i = 0; i < $checking.length; i++) {
+        let hideModal = () => {
+            for (let i = 0; i < $checking.length; i++) {
                 $checking[i].checked = false;
             }
             $modal.remove();

@@ -6,12 +6,12 @@
 
         var $button = this;
         var $body = $('body');
-        var $checking;
-        var $tryAgain;
-        var $modal;
-        var $overlay;
+        var $checking = void 0;
+        var $tryAgain = void 0;
+        var $modal = void 0;
+        var $overlay = void 0;
 
-        function showModal(e) {
+        var showModal = function showModal(e) {
             // Checking answers
             var $numberOfQuestions = $('.list-group-item').length;
             var correctAnswers = [1, 5, 6];
@@ -25,9 +25,9 @@
             $tryAgain = $('<input class="btn btn-success tryAgain" type="submit" value="Пройти тест заново">');
 
             if (Math.round(countCorrectAnswers / $numberOfQuestions * 100) === 100) {
-                $modal = $('<div class="show-modal"><p>Тест пройден!</p><p class="res">Результат: ' + Math.round(countCorrectAnswers / $numberOfQuestions * 100) + '%' + '</p></div>');
+                $modal = $('<div class="show-modal"><p>Тест пройден!</p><p class="res">Результат: ' + Math.round(countCorrectAnswers / $numberOfQuestions * 100) + '%</p></div>');
             } else {
-                $modal = $('<div class="show-modal"><p>Тест не пройден!</p><p class="res">Результат: ' + Math.round(countCorrectAnswers / $numberOfQuestions * 100) + '%' + '</p></div>');
+                $modal = $('<div class="show-modal"><p>Тест не пройден!</p><p class="res">Результат: ' + Math.round(countCorrectAnswers / $numberOfQuestions * 100) + '%</p></div>');
             }
 
             $overlay = $('<div class="modal-overlay">');
@@ -36,15 +36,15 @@
             $body.append($modal);
             $modal.append($tryAgain);
             $tryAgain.one('click', hideModal);
-        }
+        };
 
-        function hideModal() {
+        var hideModal = function hideModal() {
             for (var i = 0; i < $checking.length; i++) {
                 $checking[i].checked = false;
             }
             $modal.remove();
             $overlay.remove();
-        }
+        };
 
         $button.on('click', showModal);
 
