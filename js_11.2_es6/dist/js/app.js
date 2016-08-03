@@ -51,7 +51,7 @@
         return this;
     };
 })(jQuery);
-'use strict';
+"use strict";
 
 $(function () {
 
@@ -69,10 +69,10 @@ $(function () {
     var title = "Тест по программированию";
     var submitValue = "Проверить мои результаты";
 
-    for (var i = 0; i < numQuestions; i++) {
-        qstns[i] = JSON.parse(localStorage.getItem('q' + (i + 1)));
+    for (var _i = 0; _i < numQuestions; _i++) {
+        qstns[_i] = JSON.parse(localStorage.getItem("q" + (_i + 1)));
         for (var j = 0; j < numAnswers; j++) {
-            answrs[i][j] = JSON.parse(localStorage.getItem('a' + (i + 1) + '.' + (j + 1)));
+            answrs[_i][j] = JSON.parse(localStorage.getItem("a" + (_i + 1) + "." + (j + 1)));
         }
     }
 

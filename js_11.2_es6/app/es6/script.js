@@ -1,29 +1,27 @@
-'use strict';
-
 $(function() {
 
-    var html = $('#testQuiz').html();
+    let html = $('#testQuiz').html();
 
-    var numQuestions = 3;
-    var numAnswers = 3;
+    const numQuestions = 3;
+    const numAnswers = 3;
 
-    var qstns = new Array(numQuestions);
-    var answrs = new Array(numQuestions);
-    for (var i = 0; i < numQuestions; i++) {
+    let qstns = new Array(numQuestions);
+    let answrs = new Array(numQuestions);
+    for (let i = 0; i < numQuestions; i++) {
         answrs[i] = new Array(numAnswers);
     }
 
-    var title = "Тест по программированию";
-    var submitValue = "Проверить мои результаты";
+    const title = "Тест по программированию";
+    const submitValue = "Проверить мои результаты";
 
-    for (var i = 0; i < numQuestions; i++) {
-        qstns[i] = JSON.parse(localStorage.getItem('q' + (i + 1)));
-        for (var j = 0; j < numAnswers; j++) {
-            answrs[i][j] = JSON.parse(localStorage.getItem('a' + (i + 1) + '.' + (j + 1)));
+    for (let i = 0; i < numQuestions; i++) {
+        qstns[i] = JSON.parse(localStorage.getItem(`q${i+1}`));
+        for (let j = 0; j < numAnswers; j++) {
+            answrs[i][j] = JSON.parse(localStorage.getItem(`a${i+1}.${j+1}`));
         }
     }
 
-    var content = tmpl(html, {
+    let content = tmpl(html, {
         headTitle: title,
         q_data: qstns,
         a_data: answrs,
