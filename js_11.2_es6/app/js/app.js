@@ -86,7 +86,7 @@ $(function () {
 
     $('.modalbox').modalbox();
 });
-"use strict";
+'use strict';
 
 var numQuestions = 3;
 var numAnswers = 3;

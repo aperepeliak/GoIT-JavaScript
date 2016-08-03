@@ -1,6 +1,6 @@
 'use strict';
 
-$(function () {
+$(function() {
 
     var html = $('#testQuiz').html();
 
@@ -32,4 +32,5 @@ $(function () {
     $('body').append(content);
 
     $('.modalbox').modalbox();
+
 });

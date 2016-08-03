@@ -37,11 +37,11 @@ gulp.task('autoprefixer', function () {
         .pipe(gulp.dest('dist'));
 }); 
 
-gulp.task('watch', ['browserSync'], function () {
+gulp.task('watch', ['browserSync', 'js'], function () {
     gulp.watch('app/css/*.css');
     gulp.watch('app/*.html', browserSync.reload);
     gulp.watch('app/js/*.js', browserSync.reload);
-    gulp.watch('app/es6/*.js', browserSync.reload);
+    gulp.watch('app/es6/*.js', ['js']);
 });
 
 gulp.task('default', function(callback) {
