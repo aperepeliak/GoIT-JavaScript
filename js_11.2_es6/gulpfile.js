@@ -41,7 +41,7 @@ gulp.task('watch', ['browserSync'], function () {
     gulp.watch('app/css/*.css');
     gulp.watch('app/*.html', browserSync.reload);
     gulp.watch('app/js/*.js', browserSync.reload);
-    
+    gulp.watch('app/es6/*.js', browserSync.reload);
 });
 
 gulp.task('default', function(callback) {

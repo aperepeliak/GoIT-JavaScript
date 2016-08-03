@@ -1,5 +1,3 @@
-'use strict';
-
 (function ($) {
 
     $.fn.modalbox = function () {

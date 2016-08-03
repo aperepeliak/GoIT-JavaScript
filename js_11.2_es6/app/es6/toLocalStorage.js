@@ -1,12 +1,11 @@
-"use strict";
+const numQuestions = 3;
+const numAnswers = 3;
+let questions = new Array(numQuestions);
 
-var numQuestions = 3;
-var numAnswers = 3;
-var questions = new Array(numQuestions);
+let answers = new Array(numQuestions);
 
-var answers = new Array(numQuestions);
-for (var i = 0; i < numQuestions; i++) {
-    answers[i] = new Array(numAnswers);
+for (let value of answers) {
+    value = new Array(numAnswers);
 }
 
 questions[0] = { "question": "Какой из этих языков был создан не Аннерсом Хейлсбергом?" };
@@ -25,9 +24,9 @@ answers[2][0] = { "answer": "Брендан Эйх" };
 answers[2][1] = { "answer": "Гвидо ван Россум" };
 answers[2][2] = { "answer": "Павел Дуров" };
 
-for (var i = 0; i < numQuestions; i++) {
+for (let i = 0; i < numQuestions; i++) {
     localStorage.setItem('q' + (i + 1), JSON.stringify(questions[i]));
-    for (var j = 0; j < numAnswers; j++) {
+    for (let j = 0; j < numAnswers; j++) {
         localStorage.setItem('a' + (i + 1) + '.' + (j + 1), JSON.stringify(answers[i][j]));
     }
 }
