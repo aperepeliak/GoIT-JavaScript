@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Test Quiz</title>
+    <link href='https://fonts.googleapis.com/css?family=Ubuntu:400,700' rel='stylesheet' type='text/css'>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+   
+   
+    <link rel="stylesheet" href="css/style.css">
+  
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>-->
+    
+   
+    <!--<script src="js/jquey.modalbox.js"></script>
+    <script src="js/toLocalStorage.js"></script>
+    <script src="js/script.js"></script>-->
+
+    <script src="js/jquery-3.1.0.min.js"></script>
+    <script src="js/tmpl.js"></script>
+    <script src="js/app.js"></script>
+</head>
+
+<body>
+    <script type="text/template" id="testQuiz">
+        <div class="container">
+            <div class="page-header">
+                <h1 class="heading"><%= headTitle %></h1>
+            </div>
+            <form class="quiz" action="#" method="GET">
+                <ul class="list-group">
+                    <% for (var i = 0; i < q_data.length; i++) { %>
+                        <li class="list-group-item">
+                            <%= q_data[i].question %>
+                                <% for (var j = 0; j < a_data.length; j++) { %>
+                                    <div class="radio">
+                                        <label>
+                                            <input type="radio" name="options<%= i %>" class="<%= 'for-checking a' + i + '.' + j %>">
+                                            <span class="quiz__answer"><%= a_data[i][j].answer %></span>
+                                        </label>
+                                    </div>
+                                    <% } %>
+                        </li>
+                        <% } %>
+                </ul>
+                <input class="btn btn-primary modalbox" type="submit" value="<%= submitData %>">
+            </form>
+        </div>
+    </script>
+</body>
+
+</html>
