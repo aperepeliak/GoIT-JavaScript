@@ -1,22 +1,22 @@
 (function ($) {
 
-    $.fn.modalbox = function () {
+    $.fn.modalbox = () => {
 
-        var $button = this;
-        var $body = $('body');
-        var $checking;
-        var $tryAgain;
-        var $modal;
-        var $overlay;
+        let $button = this;
+        let $body = $('body');
+        let $checking;
+        let $tryAgain;
+        let $modal;
+        let $overlay;
 
         function showModal(e) {
             // Checking answers
-            var $numberOfQuestions = $('.list-group-item').length;
-            var correctAnswers = [1, 5, 6];
+            let $numberOfQuestions = $('.list-group-item').length;
+            const correctAnswers = [1, 5, 6];
             $checking = $('.for-checking');
-            var countCorrectAnswers = 0;
+            let countCorrectAnswers = 0;
 
-            for (var i = 0; i < correctAnswers.length; i++) {
+            for (let i = 0; i < correctAnswers.length; i++) {
                 if ($checking[correctAnswers[i]].checked) countCorrectAnswers++;
             }
 
@@ -37,8 +37,8 @@
         }
 
         function hideModal() {
-            for (var i = 0; i < $checking.length; i++) {
-                $checking[i].checked = false;
+            for (let value of $checking) {
+                value.checked = false;
             }
             $modal.remove();
             $overlay.remove();
