@@ -4,10 +4,35 @@
     <meta charset="UTF-8">
     <title>MVC</title>
 
-    <script data-main="js/app" src="js/require.js"></script>
+    <script src="js/jquery-3.1.0.min.js"></script>
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>-->
+    <script src="js/tmpl.js"></script>
+    <script src="js/script.js"></script>
 </head>
 
 <body>
+
+<script type="text/template" id="wrapper-template">
+
+    <div class="wrapper">
+        <ul class="list"></ul>
+        <div class="controls">
+            <input type="text" class="item-value">
+            <button class="item-add">Add</button>
+        </div>
+    </div>
+
+</script>
+
+<!--Template only for list items-->
+<script type="text/template" id="list-template">
+
+    <% for (var i = 0; i < data.length; i++) { %>
+    <li class="list__item"><%= data[i] %><span data-value="<%= data[i] %>" class="item-delete"> x</span></li>
+    <% }; %>
+
+</script>
+
 
 </body>
 </html>
