@@ -1,6 +1,6 @@
 function Model(data) {
 
-    // In order to create class instances
+    // To create class instances
     var self = this;
 
     // This is an array for ToDoList
@@ -25,7 +25,6 @@ function Model(data) {
 
     self.editItem = function(item) {
         oldIndex = self.data.indexOf(item);
-        console.log("oldIndex = ", oldIndex);
     };
 
     self.changeItem = function (item) {
@@ -67,7 +66,6 @@ function View(model) {
 
     var checkStates = function() {
         var inputs = $('li > input');
-        console.log('inputs = ', inputs);
         if (inputs.length)
             self.renderList(model.data);
     }
@@ -107,7 +105,6 @@ function Controller(model, view) {
         model.changeItem(newItem);
         view.renderList(model.data);
     }
-
 }
 
 $(function () {
