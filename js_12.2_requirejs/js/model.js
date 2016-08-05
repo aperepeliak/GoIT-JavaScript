@@ -1,4 +1,4 @@
-define (
+define(
     // module name
     'model',
 
@@ -6,41 +6,43 @@ define (
     [],
 
     // module description
-    function (data) {
-
-        self.removeItem = function (item) {
-            var index = self.data.indexOf(item);
-            if (index === -1)
-                return;
-
-            self.data.splice(index, 1);
-            return self.data;
-        };
-
-        self.editItem = function(item) {
-            oldIndex = self.data.indexOf(item);
-        };
-
-        self.changeItem = function (item) {
-            if (item.length === 0)
-                return;
-            self.data[oldIndex] = item;
-        };
-
+    function () {
 
         // return is a must
         return {
-            data: data,
+            data: [],
             oldIndex: 0,
+
+            init: function (data) {
+                this.data = data;
+            },
 
             addItem: function (item) {
                 if (item.length === 0)
                     return;
-                self.data.push(item);
-                return self.data;
-            }
+                this.data.push(item);
+                return this.data;
+            },
 
-            
+            removeItem: function (item) {
+                var index = this.data.indexOf(item);
+                if (index === -1)
+                    return;
+
+                this.data.splice(index, 1);
+                return this.data;
+            },
+
+            editItem: function (item) {
+                this.oldIndex = this.data.indexOf(item);
+            },
+
+            changeItem: function (item) {
+                if (item.length === 0)
+                    return;
+
+                this.data[this.oldIndex] = item;
+            }
         }
     }
 );
