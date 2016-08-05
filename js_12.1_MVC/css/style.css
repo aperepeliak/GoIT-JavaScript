@@ -1,0 +1,135 @@
+
+body {
+    background: url("../img/concrete_seamless.png");
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    font-family: 'Slabo 27px', Georgia, serif;
+    font-size: 64px;
+}
+
+.list {
+    width: 500px;
+    margin: 0 0 40px;
+    padding: 0;
+    list-style: none;
+    /*background-color: pink;*/
+}
+
+.list__item {
+    position: relative;
+    font-family: Cabin, Arial, sans-serif;
+    font-size: 18px;
+    padding: 10px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    transition: all 300ms ease;
+}
+
+.list__item:hover {
+    list-style: disc;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.item-delete {
+    display: flex;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: 5px;
+    justify-content: center;
+    align-items: center;
+    top: 12px;
+}
+
+.item-edit {
+    display: flex;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: 40px;
+    justify-content: center;
+    align-items: center;
+    top: 12px;
+
+}
+
+.item-delete:hover,
+.item-edit:hover,
+.apply:hover {
+    cursor: pointer;
+}
+
+.list__item:hover .item-edit {
+    background-image: url('../img/edit1.png');
+}
+
+.list__item:hover .item-delete {
+    background-image: url('../img/delete1.png');
+}
+
+.apply {
+    display: flex;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: 5px;
+    justify-content: center;
+    align-items: center;
+    top: 12px;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.item-value {
+    width: 200px;
+    height: 30px;
+    padding-left: 10px;
+    margin-right: 5px;
+    border-radius: 5px;
+    outline: none;
+    font-family: Cabin, Arial, sans-serif;
+    font-size: 14px;
+}
+
+.item-add {
+    height: 30px;
+    margin-bottom: 2px;
+    border-radius: 5px;
+    outline: none;
+    font-family: Cabin, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.list__item--edit {
+    position: relative;
+}
+
+.list__item--edit:hover .apply {
+    background-image: url('../img/primary-ok1.png');
+}
+
+.newInput {
+    padding: 10px;
+    width: 480px;
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    height: 22px;
+    font-family: Cabin, Arial, sans-serif;
+    font-size: 18px;
+    outline: none;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+

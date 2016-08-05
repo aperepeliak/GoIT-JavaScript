@@ -58,7 +58,7 @@ function View(model) {
 
     self.changeState = function (item) {
         checkStates();
-        $("li:contains(" + item + ")").replaceWith('<li><input class="newInput" type="text" value="' + item + '"><span class="apply"> =</span></li>');
+        $("li:contains(" + item + ")").replaceWith('<li class="list__item--edit"><input class="newInput" type="text" value="' + item + '"><span class="apply"></span></li>');
 
         self.elements.editInput = $('.newInput');
         self.elements.editInput.focus();

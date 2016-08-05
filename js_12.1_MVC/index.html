@@ -4,6 +4,14 @@
     <meta charset="UTF-8">
     <title>MVC</title>
 
+    <!--Fonts-->
+    <link href='https://fonts.googleapis.com/css?family=Slabo+27px' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Cabin' rel='stylesheet' type='text/css'>
+
+    <!--Styles-->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!--Scripts-->
     <script src="js/jquery-3.1.0.min.js"></script>
     <script src="js/tmpl.js"></script>
     <script src="js/script.js"></script>
@@ -28,7 +36,7 @@
 <script type="text/template" id="list-template">
 
     <% for (var i = 0; i < data.length; i++) { %>
-    <li class="list__item"><%= data[i] %><span data-value="<%= data[i] %>" class="item-edit"> + </span><span data-value="<%= data[i] %>" class="item-delete"> x</span></li>
+    <li class="list__item"><%= data[i] %><span data-value="<%= data[i] %>" class="item-edit"></span> <span data-value="<%= data[i] %>" class="item-delete"> </span></li>
     <% }; %>
 
 </script>
