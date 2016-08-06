@@ -10,12 +10,17 @@ $(function() {
     });
     
     $pages = $('.pages');
-    console.log($pages);
+    console.log('$pages = ', $pages);
+    console.log('$pages[0] = ', $pages[0]);
+
+    $pages.eq(0).addClass('test');
 
     $items = $('.items');
-     console.log($items);
+     console.log('$items = ', $items);
+     console.log('$items[0] = ', $items[0]);
+     console.log('$ = ', $);
 
-    // $pages[0].addClass('test'); - what's wrong with this code??
-    // $items[0].addClass('test');       
+     $('.jcarousel > ul').css({"top": "0", "left": "0"});
+   
 });
 
