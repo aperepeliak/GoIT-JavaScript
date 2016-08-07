@@ -584,10 +584,6 @@ footer {
       transition: all 200ms ease-out; }
     .carousel-container .jcarousel-pagination a .active {
       opacity: 1; }
-    .carousel-container .jcarousel-pagination a:hover .pages {
-      opacity: 1; }
-    .carousel-container .jcarousel-pagination a:focus .pages {
-      opacity: 1; }
 
 .features {
   display: -ms-flexbox;
