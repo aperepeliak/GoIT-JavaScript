@@ -24,16 +24,6 @@ gulp.task('pages', function () {
         .pipe(gulp.dest('dist'));
 });
 
-// gulp.task('plugin', function () {
-//     return gulp.src('app/js/jquery.jcarousel.js')
-//         .pipe(gulp.dest('dist/js'));
-// });
-
-// gulp.task('accordion', function () {
-//     return gulp.src('app/js/jquery-ui.js')
-//         .pipe(gulp.dest('dist/js'));
-// });
-
 gulp.task('clean:dist', function () {
     return del.sync('dist');
 });
