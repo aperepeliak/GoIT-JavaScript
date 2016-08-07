@@ -1,5 +1,6 @@
 .carousel-container {
     @include hor-flex();
+    position: relative;
 
     /*Carousel styling*/
 
@@ -57,6 +58,25 @@
             .active {
                 opacity: 1;
             }
+        }
+    }
+
+    .slogan {
+        padding-left: 50px;
+        padding-top: 55px;
+        height: 197px;
+        width: 308px;
+        line-height: 0.9;
+        position: absolute;
+        bottom: 70px;
+        left: 100px;
+        font-family: $header-font;
+        font-size: 54px;
+        color: $news-bg-grey;
+        background: url('../images/bg-slogan.png') no-repeat center;
+
+        span {
+            color: $hover-yellow;
         }
     } 
 }
