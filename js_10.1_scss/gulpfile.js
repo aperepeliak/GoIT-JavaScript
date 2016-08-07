@@ -13,7 +13,7 @@ var cache = require('gulp-cache');
 
 gulp.task('js', function () {
     gulp.src([
-        'app/js/*.js', '!app/js/main.js', '!app/js/jquery.jcarousel.js'
+        'app/js/*.js', '!app/js/main.js', '!app/js/jquery.jcarousel.js', '!app/js/jquery-ui.js'
     ])
         .pipe(concat('main.js'))
         .pipe(gulp.dest('app/js'));

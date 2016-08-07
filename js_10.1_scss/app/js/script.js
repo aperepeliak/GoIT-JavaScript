@@ -3,6 +3,8 @@ $(function () {
     // Carousel
     $('.jcarousel').jcarousel();
 
+    $( "#accordion" ).accordion();
+
     $('.jcarousel-pagination').jcarouselPagination({
         item: function (page) {
             return '<a class="pgs" href="#' + page + '">' + '<span class="pages page-' + page + '" style="display:block; width:8px; height:8px; background-color:#000;"></span>' + '</a>';
