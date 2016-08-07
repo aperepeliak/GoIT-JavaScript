@@ -36,8 +36,6 @@
         display: flex;
         justify-content: space-around;
         align-items: center;
-
-        
     }
 
     .jcarousel-pagination {
@@ -59,23 +57,6 @@
             .active {
                 opacity: 1;
             }
-
-            // &:hover {
-            //     .pages {
-            //       opacity: 1;
-            //      }
-            // }
-
-            // &:focus {
-            //     .pages {
-            //       opacity: 1;
-            //      }
-            // }
         }
     } 
-
-    // .jcarousel-pagination a:hover,
-    // .jcarousel-pagination a:focus {
-        
-    // }
 }

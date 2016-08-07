@@ -11,20 +11,20 @@ var autoprefixer = require('gulp-autoprefixer');
 var concat = require('gulp-concat');
 var cache = require('gulp-cache');
 
-gulp.task('js', function() {
+gulp.task('js', function () {
     gulp.src([
-            'app/js/*.js', '!app/js/main.js', '!app/js/jquery.jcarousel.js'
-        ])
+        'app/js/*.js', '!app/js/main.js', '!app/js/jquery.jcarousel.js'
+    ])
         .pipe(concat('main.js'))
         .pipe(gulp.dest('app/js'));
 });
 
-gulp.task('pages', function() {
+gulp.task('pages', function () {
     return gulp.src('app/*.html')
         .pipe(gulp.dest('dist'));
 });
 
-gulp.task('plugin', function() {
+gulp.task('plugin', function () {
     return gulp.src('app/js/jquery.jcarousel.js')
         .pipe(gulp.dest('dist/js'));
 });
@@ -38,11 +38,11 @@ gulp.task('images', function () {
         .pipe(cache(imagemin({
             progressive: true,
             interlaced: true
-         })))
-         .pipe(gulp.dest('dist/images'));
+        })))
+        .pipe(gulp.dest('dist/images'));
 });
 
-gulp.task('sass', function() {
+gulp.task('sass', function () {
     return gulp.src('app/scss/main.scss')
         .pipe(sass())
         .pipe(autoprefixer({
@@ -67,20 +67,20 @@ gulp.task('watch', ['browserSync', 'sass', 'js'], function () {
     gulp.watch('app/scss/**/*.scss', ['sass']);
     gulp.watch('app/js/*.js', ['js']);
     gulp.watch('app/*.html', browserSync.reload);
-    gulp.watch('app/js/main.js', browserSync.reload);  
+    gulp.watch('app/js/main.js', browserSync.reload);
 });
 
-gulp.task('default', function(callback) {
+gulp.task('default', function (callback) {
     runSequence(['sass', 'js', 'browserSync', 'watch'], callback);
 });
 
-gulp.task('uglify', function() {
+gulp.task('uglify', function () {
     return gulp.src('app/js/main.js')
         .pipe(uglify())
         .pipe(gulp.dest('dist/js'));
 });
 
-gulp.task('cssnano', function() {
+gulp.task('cssnano', function () {
     return gulp.src('app/css/main.css')
         .pipe(cssnano())
         .pipe(gulp.dest('dist/css'));
@@ -88,7 +88,7 @@ gulp.task('cssnano', function() {
 
 
 gulp.task('build', function (callback) {
-   runSequence('clean:dist',
+    runSequence('clean:dist',
         ['cssnano', 'uglify', 'images', 'plugin', 'pages'],
-        callback); 
+        callback);
 });
