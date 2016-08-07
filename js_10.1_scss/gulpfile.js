@@ -13,7 +13,7 @@ var cache = require('gulp-cache');
 
 gulp.task('js', function () {
     gulp.src([
-        'app/js/*.js', '!app/js/main.js', '!app/js/jquery.jcarousel.js', '!app/js/jquery-ui.js'
+        'app/js/*.js', '!app/js/main.js'
     ])
         .pipe(concat('main.js'))
         .pipe(gulp.dest('app/js'));
@@ -24,15 +24,15 @@ gulp.task('pages', function () {
         .pipe(gulp.dest('dist'));
 });
 
-gulp.task('plugin', function () {
-    return gulp.src('app/js/jquery.jcarousel.js')
-        .pipe(gulp.dest('dist/js'));
-});
+// gulp.task('plugin', function () {
+//     return gulp.src('app/js/jquery.jcarousel.js')
+//         .pipe(gulp.dest('dist/js'));
+// });
 
-gulp.task('accordion', function () {
-    return gulp.src('app/js/jquery-ui.js')
-        .pipe(gulp.dest('dist/js'));
-});
+// gulp.task('accordion', function () {
+//     return gulp.src('app/js/jquery-ui.js')
+//         .pipe(gulp.dest('dist/js'));
+// });
 
 gulp.task('clean:dist', function () {
     return del.sync('dist');
@@ -94,6 +94,6 @@ gulp.task('cssnano', function () {
 
 gulp.task('build', function (callback) {
     runSequence('clean:dist',
-        ['cssnano', 'uglify', 'images', 'plugin', 'accordion', 'pages'],
+        ['cssnano', 'uglify', 'images', 'pages'],
         callback);
 });
