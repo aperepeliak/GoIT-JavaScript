@@ -29,6 +29,11 @@ gulp.task('plugin', function () {
         .pipe(gulp.dest('dist/js'));
 });
 
+gulp.task('accordion', function () {
+    return gulp.src('app/js/jquery-ui.js')
+        .pipe(gulp.dest('dist/js'));
+});
+
 gulp.task('clean:dist', function () {
     return del.sync('dist');
 });
@@ -89,6 +94,6 @@ gulp.task('cssnano', function () {
 
 gulp.task('build', function (callback) {
     runSequence('clean:dist',
-        ['cssnano', 'uglify', 'images', 'plugin', 'pages'],
+        ['cssnano', 'uglify', 'images', 'plugin', 'accordion', 'pages'],
         callback);
 });
