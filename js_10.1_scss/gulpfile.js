@@ -18,7 +18,7 @@ var cache = require('gulp-cache');
 
 gulp.task('js', function() {
     gulp.src([
-            'app/js/*.js', '!app/js/main.js'
+            'app/js/*.js', '!app/js/main.js', '!app/js/jquery.jcarousel.js'
         ])
         .pipe(concat('main.js'))
         .pipe(gulp.dest('app/js'));
@@ -28,6 +28,11 @@ gulp.task('js', function() {
 gulp.task('pages', function() {
     return gulp.src('app/*.html')
         .pipe(gulp.dest('dist'));
+});
+
+gulp.task('plugin', function() {
+    return gulp.src('app/js/jquery.jcarousel.js')
+        .pipe(gulp.dest('dist/js'));
 });
 
 // gulp.task('autoprefixer', function () {
@@ -101,7 +106,7 @@ gulp.task('cssnano', function() {
 
 gulp.task('build', function (callback) {
    runSequence('clean:dist',
-        ['cssnano', 'uglify', 'images', 'pages'],
+        ['cssnano', 'uglify', 'images', 'plugin', 'pages'],
         callback); 
 });
 
