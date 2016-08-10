@@ -583,7 +583,7 @@ footer {
     .carousel-container .jcarousel-pagination a .pages {
       opacity: 0;
       transition: all 200ms ease-out; }
-    .carousel-container .jcarousel-pagination a .active {
+    .carousel-container .jcarousel-pagination a.active .pages {
       opacity: 1; }
   .carousel-container .slogan {
     padding-left: 50px;

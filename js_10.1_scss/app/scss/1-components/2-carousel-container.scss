@@ -55,7 +55,7 @@
                 transition: all 200ms ease-out;
                 }
 
-            .active {
+            &.active .pages {
                 opacity: 1;
             }
         }
