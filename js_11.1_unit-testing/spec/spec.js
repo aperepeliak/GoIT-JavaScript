@@ -40,7 +40,6 @@ describe("toLocalStorage", function () {
     expect(toLocalStorage.answers).toBeDefined();
   });
 
-  // возвращает ошибку, потому что localStorage не определен. Наверное, это из-за использования phantomjs?
   it("generates test quiz", function() {
     var result;
     result = toLocalStorage.generate();
