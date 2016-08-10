@@ -540,7 +540,11 @@ footer {
   justify-content: space-between;
   -ms-flex-align: center;
   align-items: center;
-  position: relative;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-pack: center;
+  justify-content: center;
   /*Carousel styling*/ }
   .carousel-container .jcarousel {
     width: 1160px;
@@ -585,21 +589,23 @@ footer {
       transition: all 200ms ease-out; }
     .carousel-container .jcarousel-pagination a.active .pages {
       opacity: 1; }
-  .carousel-container .slogan {
-    padding-left: 50px;
-    padding-top: 55px;
-    height: 197px;
-    width: 308px;
-    line-height: 0.9;
-    position: absolute;
-    bottom: 70px;
-    left: 100px;
-    font-family: "Ubuntu", Arial, sans-serif;
-    font-size: 54px;
-    color: #f7f7f7;
-    background: url("../images/bg-slogan.png") no-repeat center; }
-    .carousel-container .slogan span {
-      color: #f4b60d; }
+  .carousel-container div {
+    position: relative; }
+    .carousel-container div .slogan {
+      padding-left: 50px;
+      padding-top: 55px;
+      height: 197px;
+      width: 308px;
+      line-height: 0.9;
+      position: absolute;
+      bottom: 20px;
+      left: -585px;
+      font-family: "Ubuntu", Arial, sans-serif;
+      font-size: 54px;
+      color: #f7f7f7;
+      background: url("../images/bg-slogan.png") no-repeat center; }
+      .carousel-container div .slogan span {
+        color: #f4b60d; }
 
 .features {
   display: -ms-flexbox;
