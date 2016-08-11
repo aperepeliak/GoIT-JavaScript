@@ -72,50 +72,43 @@ function View(model) {
 
 function Controller(model, view) {
 
-    this.addItem = () => {
+    const addItem = () => {
         let newItem = view.elements.input.val();
         model.addItem(newItem);
         view.renderList(model.data);
         view.elements.input.val('');
     };
 
-    this.removeItem = () => {
+    const removeItem = () => {
         console.log('test');
-        debugger;
+        //debugger;
         let item = $(this).attr('data-value');
         model.removeItem(item);
         view.renderList(model.data);
     };
 
-    this.editItem =() => {
+    const editItem =() => {
         let item = $(this).attr('data-value');
         model.editItem(item);
         view.changeState(item);
     };
 
-    this.applyItem = () => {
+    const applyItem = () => {
         let newItem = view.elements.editInput.val();
         model.changeItem(newItem);
         view.renderList(model.data);
     };
 
     view.elements.addBtn.on('click', this.addItem);
-    view.elements.listContainer.on('click', '.item-delete', this.removeItem);
-    view.elements.listContainer.on('click', '.item-edit', this.editItem);
-    view.elements.listContainer.on('click', '.apply', this.applyItem);
+    view.elements.listContainer.on('click', '.item-delete', removeItem);
+    view.elements.listContainer.on('click', '.item-edit', editItem);
+    view.elements.listContainer.on('click', '.apply', applyItem);
 }
 
 $(function () {
     const firstToDoList = ['learn JS', 'learn C#', 'become a programmer'];
     const model = new Model(firstToDoList);
-
-    console.log(model);
-
     const view = new View(model);
-
-    console.log(view);
-
     const controller = new Controller(model, view);
 
-    console.log(controller);
 });
