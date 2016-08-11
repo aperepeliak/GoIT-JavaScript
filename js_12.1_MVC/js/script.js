@@ -1,116 +1,116 @@
-function Model(data) {
-
-    // To create class instances
-    var self = this;
+function Model(_data) {
 
     // This is an array for ToDoList
-    self.data = data;
-    var oldIndex;
+    this.data = _data;
+    let oldIndex;
 
-    self.addItem = function (item) {
+    this.addItem = (item) => {
+
         if (item.length === 0)
             return;
-        self.data.push(item);
-        return self.data;
+        this.data.push(item);
+        return data;
     };
 
-    self.removeItem = function (item) {
-        var index = self.data.indexOf(item);
+    this.removeItem = (item) => {
+        let index = data.indexOf(item);
         if (index === -1)
             return;
 
-        self.data.splice(index, 1);
-        return self.data;
+        this.data.splice(index, 1);
+        return data;
     };
 
-    self.editItem = function(item) {
-        oldIndex = self.data.indexOf(item);
+    this.editItem = (item) => {
+        oldIndex = data.indexOf(item);
     };
 
-    self.changeItem = function (item) {
+    this.changeItem = (item) => {
         if (item.length === 0)
             return;
-        self.data[oldIndex] = item;
+        data[oldIndex] = item;
     };
 }
 
 function View(model) {
-    var self = this;
 
-    function init() {
+    this.init = () => {
 
-        var wrapper = tmpl($('#wrapper-template').html());
+        let wrapper = tmpl($('#wrapper-template').html());
         $('body').append(wrapper);
 
-        self.elements = {
+        this.elements = {
             input: $('.item-value'),
             addBtn: $('.item-add'),
             listContainer: $('.list')
         };
 
-        self.renderList(model.data);
-    }
-
-    self.renderList = function (data) {
-        var list = tmpl($('#list-template').html(), {data: data});
-        self.elements.listContainer.html(list);
+        this.renderList(model.data);
     };
 
-    self.changeState = function (item) {
-        checkStates();
+    this.renderList = (data) => {
+        let list = tmpl($('#list-template').html(), {data: data});
+        this.elements.listContainer.html(list);
+    };
+
+    this.changeState = (item) => {
+        this.checkStates();
         $("li:contains(" + item + ")").replaceWith('<li class="list__item--edit"><input class="newInput" type="text" value="' + item + '"><span class="apply"></span></li>');
 
-        self.elements.editInput = $('.newInput');
-        self.elements.editInput.focus();
+        this.elements.editInput = $('.newInput');
+        this.elements.editInput.focus();
     };
 
-    var checkStates = function() {
-        var inputs = $('li > input');
+    this.checkStates = () => {
+        let inputs = $('li > input');
         if (inputs.length)
-            self.renderList(model.data);
-    }
+            this.renderList(model.data);
+    };
 
-    init();
+    this.init();
 }
 
 function Controller(model, view) {
+    debugger;
+    view.elements.addBtn.on('click', this.addItem);
+    view.elements.listContainer.on('click', '.item-delete', this.removeItem);
+    view.elements.listContainer.on('click', '.item-edit', this.editItem);
+    view.elements.listContainer.on('click', '.apply', this.applyItem);
 
-    view.elements.addBtn.on('click', addItem);
-    view.elements.listContainer.on('click', '.item-delete', removeItem);
-    view.elements.listContainer.on('click', '.item-edit', editItem);
-    view.elements.listContainer.on('click', '.apply', applyItem);
 
-
-    function addItem() {
-        var newItem = view.elements.input.val();
+    this.addItem = () => {
+        let newItem = view.elements.input.val();
         model.addItem(newItem);
         view.renderList(model.data);
         view.elements.input.val('');
-    }
+    };
 
-    function removeItem() {
-        var item = $(this).attr('data-value');
+    this.removeItem = () => {
+
+        let item = $(this).attr('data-value');
         model.removeItem(item);
         view.renderList(model.data);
-    }
+    };
 
-    function editItem() {
-        var item = $(this).attr('data-value');
+    this.editItem =() => {
+        let item = $(this).attr('data-value');
         model.editItem(item);
         view.changeState(item);
-    }
+    };
 
-    function applyItem() {
-        var newItem = view.elements.editInput.val();
+    this.applyItem = () => {
+        let newItem = view.elements.editInput.val();
         model.changeItem(newItem);
         view.renderList(model.data);
-    }
+    };
 }
 
 $(function () {
-    var firstToDoList = ['learn JS', 'learn C#', 'become a programmer'];
-    var model = new Model(firstToDoList);
+    const firstToDoList = ['learn JS', 'learn C#', 'become a programmer'];
+    const model = new Model(firstToDoList);
 
-    var view = new View(model);
-    var controller = new Controller(model, view);
+    console.log(model);
+
+    const view = new View(model);
+    const controller = new Controller(model, view);
 });
