@@ -9,11 +9,11 @@ function Model(_data) {
         if (item.length === 0)
             return;
         this.data.push(item);
-        return data;
+        return this.data;
     };
 
     this.removeItem = (item) => {
-        let index = data.indexOf(item);
+        let index = this.data.indexOf(item);
         if (index === -1)
             return;
 
@@ -22,7 +22,7 @@ function Model(_data) {
     };
 
     this.editItem = (item) => {
-        oldIndex = data.indexOf(item);
+        oldIndex = this.data.indexOf(item);
     };
 
     this.changeItem = (item) => {
@@ -34,12 +34,12 @@ function Model(_data) {
 
 function View(model) {
 
-    this.init = () => {
+    let init = () => {
 
         let wrapper = tmpl($('#wrapper-template').html());
         $('body').append(wrapper);
-
         this.elements = {
+
             input: $('.item-value'),
             addBtn: $('.item-add'),
             listContainer: $('.list')
@@ -67,16 +67,10 @@ function View(model) {
             this.renderList(model.data);
     };
 
-    this.init();
+    init();
 }
 
 function Controller(model, view) {
-    debugger;
-    view.elements.addBtn.on('click', this.addItem);
-    view.elements.listContainer.on('click', '.item-delete', this.removeItem);
-    view.elements.listContainer.on('click', '.item-edit', this.editItem);
-    view.elements.listContainer.on('click', '.apply', this.applyItem);
-
 
     this.addItem = () => {
         let newItem = view.elements.input.val();
@@ -86,7 +80,8 @@ function Controller(model, view) {
     };
 
     this.removeItem = () => {
-
+        console.log('test');
+        debugger;
         let item = $(this).attr('data-value');
         model.removeItem(item);
         view.renderList(model.data);
@@ -103,6 +98,11 @@ function Controller(model, view) {
         model.changeItem(newItem);
         view.renderList(model.data);
     };
+
+    view.elements.addBtn.on('click', this.addItem);
+    view.elements.listContainer.on('click', '.item-delete', this.removeItem);
+    view.elements.listContainer.on('click', '.item-edit', this.editItem);
+    view.elements.listContainer.on('click', '.apply', this.applyItem);
 }
 
 $(function () {
@@ -112,5 +112,10 @@ $(function () {
     console.log(model);
 
     const view = new View(model);
+
+    console.log(view);
+
     const controller = new Controller(model, view);
+
+    console.log(controller);
 });
