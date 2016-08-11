@@ -109,5 +109,4 @@ $(function () {
     const model = new Model(firstToDoList);
     const view = new View(model);
     const controller = new Controller(model, view);
-
 });
