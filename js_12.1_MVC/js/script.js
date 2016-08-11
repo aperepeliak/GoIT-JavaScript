@@ -18,7 +18,7 @@ function Model(_data) {
             return;
 
         this.data.splice(index, 1);
-        return data;
+        return this.data;
     };
 
     this.editItem = (item) => {
@@ -28,7 +28,7 @@ function Model(_data) {
     this.changeItem = (item) => {
         if (item.length === 0)
             return;
-        data[oldIndex] = item;
+        this.data[oldIndex] = item;
     };
 }
 
@@ -72,37 +72,36 @@ function View(model) {
 
 function Controller(model, view) {
 
-    const addItem = () => {
-        let newItem = view.elements.input.val();
-        model.addItem(newItem);
-        view.renderList(model.data);
-        view.elements.input.val('');
-    };
-
-    const removeItem = () => {
-        console.log('test');
-        //debugger;
-        let item = $(this).attr('data-value');
-        model.removeItem(item);
-        view.renderList(model.data);
-    };
-
-    const editItem =() => {
-        let item = $(this).attr('data-value');
-        model.editItem(item);
-        view.changeState(item);
-    };
-
-    const applyItem = () => {
-        let newItem = view.elements.editInput.val();
-        model.changeItem(newItem);
-        view.renderList(model.data);
-    };
-
-    view.elements.addBtn.on('click', this.addItem);
+    view.elements.addBtn.on('click', addItem);
     view.elements.listContainer.on('click', '.item-delete', removeItem);
     view.elements.listContainer.on('click', '.item-edit', editItem);
     view.elements.listContainer.on('click', '.apply', applyItem);
+
+
+    function addItem() {
+        var newItem = view.elements.input.val();
+        model.addItem(newItem);
+        view.renderList(model.data);
+        view.elements.input.val('');
+    }
+
+    function removeItem() {
+        var item = $(this).attr('data-value');
+        model.removeItem(item);
+        view.renderList(model.data);
+    }
+
+    function editItem() {
+        var item = $(this).attr('data-value');
+        model.editItem(item);
+        view.changeState(item);
+    }
+
+    function applyItem() {
+        var newItem = view.elements.editInput.val();
+        model.changeItem(newItem);
+        view.renderList(model.data);
+    }
 }
 
 $(function () {
