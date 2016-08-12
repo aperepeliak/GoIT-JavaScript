@@ -13,19 +13,19 @@ define(
             data: [],
             oldIndex: 0,
 
-            init: function (data) {
+            init(data) {
                 this.data = data;
             },
 
-            addItem: function (item) {
+            addItem(item) {
                 if (item.length === 0)
                     return;
                 this.data.push(item);
                 return this.data;
             },
 
-            removeItem: function (item) {
-                var index = this.data.indexOf(item);
+            removeItem(item) {
+                const index = this.data.indexOf(item);
                 if (index === -1)
                     return;
 
@@ -33,11 +33,11 @@ define(
                 return this.data;
             },
 
-            editItem: function (item) {
+            editItem(item) {
                 this.oldIndex = this.data.indexOf(item);
             },
 
-            changeItem: function (item) {
+            changeItem(item) {
                 if (item.length === 0)
                     return;
 
