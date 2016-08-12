@@ -10,34 +10,34 @@ define(
 
         return {
 
-            init: function (model, view) {
+            init(model, view) {
                 view.elements.addBtn.on('click', this.addItem);
                 view.elements.listContainer.on('click', '.item-delete', this.removeItem);
                 view.elements.listContainer.on('click', '.item-edit', this.editItem);
                 view.elements.listContainer.on('click', '.apply', this.applyItem);
             },
 
-            addItem: function () {
-                var newItem = view.elements.input.val();
+            addItem() {
+                const newItem = view.elements.input.val();
                 model.addItem(newItem);
                 view.renderList(model.data);
                 view.elements.input.val('');
             },
 
-            removeItem: function () {
-                var item = $(this).attr('data-value');
+            removeItem() {
+                const item = $(this).attr('data-value');
                 model.removeItem(item);
                 view.renderList(model.data);
             },
 
-            editItem: function () {
-                var item = $(this).attr('data-value');
+            editItem() {
+                const item = $(this).attr('data-value');
                 model.editItem(item);
                 view.changeState(item);
             },
 
-            applyItem: function () {
-                var newItem = view.elements.editInput.val();
+            applyItem() {
+                const newItem = view.elements.editInput.val();
                 model.changeItem(newItem);
                 view.renderList(model.data);
             }
