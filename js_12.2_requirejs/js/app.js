@@ -30,7 +30,7 @@ require(
     function (model, view, controller, tmpl, $) {
         var firstToDoList = ['learn JS', 'learn C#', 'become a programmer'];
         model.init(firstToDoList);
-        view.init(model.data);
+        view.init();
         controller.init(model, view);
     }
 );

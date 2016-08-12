@@ -9,7 +9,7 @@ define(
     function (model) {
 
         return {
-            init(data) {
+            init() {
 
                 const wrapper = tmpl($('#wrapper-template').html());
                 $('body').append(wrapper);
@@ -36,12 +36,15 @@ define(
 
             changeState(item) {
                 this.checkStates();
-                $("li:contains(" + item + ")").replaceWith('<li class="list__item--edit"><input class="newInput" type="text" value="' + item + '"><span class="apply"></span></li>');
+
+                let $elem = $("li").filter(function() {
+                    return $.trim($(this).text()) === item;
+                });
+                $elem.replaceWith('<li class="list__item--edit"><input class="newInput" type="text" value="' + item + '"><span class="apply"></span></li>');
 
                 this.elements.editInput = $('.newInput');
                 this.elements.editInput.focus();
             }
-
         }
     }
 );
