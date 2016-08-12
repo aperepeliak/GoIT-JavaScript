@@ -10,7 +10,7 @@ define(
 
         return {
 
-            init(model, view) {
+            init(view) {
                 view.elements.addBtn.on('click', this.addItem);
                 view.elements.listContainer.on('click', '.item-delete', this.removeItem);
                 view.elements.listContainer.on('click', '.item-edit', this.editItem);

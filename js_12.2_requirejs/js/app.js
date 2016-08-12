@@ -31,6 +31,6 @@ require(
         var firstToDoList = ['learn JS', 'learn C#', 'become a programmer'];
         model.init(firstToDoList);
         view.init();
-        controller.init(model, view);
+        controller.init(view);
     }
 );
