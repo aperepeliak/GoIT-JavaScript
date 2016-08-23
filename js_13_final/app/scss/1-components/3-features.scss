@@ -1,0 +1,68 @@
+.features {
+    display: flex;
+    justify-content: space-between;
+
+    
+    article {
+
+        width: 360px;
+        display: flex;
+        .col-1 {
+            font-family: $header-font;
+            color: $nums-grey;
+            font-size: 90px;
+            margin-top: -20px;
+        }
+
+        .col-2 {
+
+            width: 240px;
+            margin-left: 15px;
+
+            h3 {
+                font-family: $header-font;
+                color: $headers-black;
+                font-size: 20px;
+            }
+
+            p {
+                font-family: $text-font;
+                color: $parag-grey;
+                font-size: 13px;
+            }
+
+            a {
+                display: block;
+                width: 85px;
+                font-family: $header-font;
+                color: $headers-black;
+                font-size: 13px;
+                text-shadow: rgba(0,0,0, 0.3) 0 0 1px;
+                background: url('../images/arrow.png') no-repeat right center;
+                &:hover {
+                    background: url('../images/arrow-hover.png') no-repeat right center;
+                    color: $active-blue;
+                }
+            }
+
+            .sprite-settings {
+                background: url('../images/sprite-features.png') no-repeat 0 0;
+                width: 32px;
+                height: 32px;
+            }
+            .sprite-params {
+                background: url('../images/sprite-features.png') no-repeat -58px 0;
+                width: 32px;
+                height: 32px;
+            }
+            .sprite-truck {
+                background: url('../images/sprite-features.png') no-repeat -108px -6px;
+                width: 32px;
+                height: 26px;
+            }
+        }  
+    }
+}
+
+
+

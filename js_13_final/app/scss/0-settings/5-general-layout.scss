@@ -1,0 +1,44 @@
+
+.logo-and-socials,
+.main-menu,
+.carousel-container,
+.features,
+.services,
+.news-and-banners,
+.brands,
+footer {
+    padding: 0 calc(50% - 580px);
+}
+
+// Components heights
+.logo-and-socials {
+    height: 90px;
+}
+.main-menu {
+    height: 55px;
+}
+.carousel-container {
+    height: 580px;
+}
+.features { 
+    height: 260px;
+}
+.services {
+    height: 495px;
+}
+.news-and-banners {
+    height: 540px;
+}
+.brands {
+    height: 240px;
+}
+footer {
+    height: 385px;
+}
+
+
+
+
+
+
+

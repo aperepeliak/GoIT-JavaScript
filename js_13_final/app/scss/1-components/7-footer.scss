@@ -1,0 +1,74 @@
+footer {
+    background-image: url('../images/footer-bg.png');
+
+    nav {
+
+        @include hor-flex();
+        height: 320px;
+        margin-bottom: 5px;
+        h3 {
+            font-family: $header-font;
+            font-size: 16px;
+            color: #fff;
+        }
+
+        li {
+            display: flex;
+            align-items: center;
+            width: 260px;
+            height: 34px;
+            border-bottom: 1px solid rgba(255,255,255, 0.1);
+
+            &:last-child{
+                border-bottom: none;
+            }
+
+            a {
+            font-family: $text-font;
+            font-size: 13px;
+            color: rgba(255,255,255, 0.3);
+                &:hover {
+                    color: $active-blue;
+                }
+            }
+        }  
+    }
+
+    section {
+        @include hor-flex();
+        height: 60px;
+        font-family: $text-font;
+        font-size: 12px;
+        color: rgba(255,255,255, 0.3);
+
+        address {
+            display: flex;
+            align-items: center;
+            height: 100%;
+            font-style: normal;
+
+            .location {
+                display: inline-block;
+                height: 17px;
+                padding-left: 20px;
+                background: url('../images/location.png') no-repeat 0 0;
+            }
+
+            .phone {
+                display: inline-block;
+                height: 17px;
+                padding-left: 15px;
+                margin-left: 30px;
+                background: url('../images/phone.png') no-repeat 0 0;
+            }
+
+            .email {
+                display: inline-block;
+                height: 17px;
+                padding-left: 25px;
+                margin-left: 30px;
+                background: url('../images/email.png') no-repeat 0 0;
+            }
+        }
+    }
+}

@@ -1,0 +1,58 @@
+.main-menu {
+    @include hor-flex();
+    
+
+    ul {
+        @include hor-flex();
+        width: 580px;
+        height: 100%;
+        background-color: $menu-bg-grey;
+        li {
+            @include hor-flex();
+            justify-content: center;
+            width: 115px;
+            height: 100%;
+            border-right: 1px solid $border-right;
+            
+            a { 
+                color: #fff;
+                font-family: $menu-font;
+                font-size: 14px;
+
+                &:hover {
+                    color: $hover-yellow;
+                }
+            }
+
+            &:first-child {
+                background-color: $active-blue;
+            }
+        }
+    }
+
+    .search {
+        @include hor-flex();
+        justify-content: flex-end;
+        width: 580px;
+        height: 100%;
+        padding-right: 8px;
+        background-color: $menu-bg-grey;
+        input {
+            padding-left: 10px;
+            color: rgba(255,255,255, 0.7);
+            font-family: $text-font;
+            font-size: 12px;
+            height: 38px;
+            width: 240px;
+            background-color: $search-grey;
+            background: url('../images/search.png') no-repeat 220px center;
+            border: 1px solid $border-right;
+            &:focus {
+                background-color: $active-blue;
+                background-image: none;
+                outline: none;
+            }
+        }
+    }
+
+}
