@@ -1,40 +1,45 @@
-
-.logo-and-socials,
-.main-menu,
-.carousel-container,
-.features,
-.services,
-.news-and-banners,
-.brands,
+header,
+main,
 footer {
-    padding: 0 calc(50% - 580px);
+  padding: 0 calc(50% - 150px);
 }
+
+header {
+    height: 540px;
+  }
+
+
+
+@media(min-width: $tablet) {
+  header,
+  main,
+  footer {
+    padding: 0 calc(50% - 374px);
+  }
+
+  header {
+    height: 700px;
+  }
+
+}
+
+@media(min-width: $desktop) {
+  header,
+  main,
+  footer {
+    padding: 0 calc(50% - 464px);
+  }
+
+ header {
+    height: 700px;
+  }
+}
+
+
+
 
 // Components heights
-.logo-and-socials {
-    height: 90px;
-}
-.main-menu {
-    height: 55px;
-}
-.carousel-container {
-    height: 580px;
-}
-.features { 
-    height: 260px;
-}
-.services {
-    height: 495px;
-}
-.news-and-banners {
-    height: 540px;
-}
-.brands {
-    height: 240px;
-}
-footer {
-    height: 385px;
-}
+
 
 
 
