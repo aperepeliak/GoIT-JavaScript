@@ -1,4 +1,4 @@
-@import 'https://fonts.googleapis.com/css?family=Montserrat:400,700|Roboto:300';
+@import 'https://fonts.googleapis.com/css?family=Montserrat:700|Roboto:100';
 /*! normalize.css v4.1.1 | MIT License | github.com/necolas/normalize.css */
 /**
  * 1. Change the default font family in all browsers (opinionated).
@@ -398,8 +398,14 @@ header {
     height: 700px; } }
 
 header {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-align: center;
+  align-items: center;
   font-family: "Montserrat", sans-serif;
-  background: url("../images/header-bg.png") no-repeat center center fixed;
+  background: url("../images/header-bg.png") no-repeat center center;
   background-size: cover; }
   header .logo-and-auth {
     display: -ms-flexbox;
@@ -407,15 +413,108 @@ header {
     -ms-flex-direction: column;
     flex-direction: column;
     -ms-flex-align: center;
-    align-items: center; }
+    align-items: center;
+    font-size: 14px; }
     header .logo-and-auth a {
       -ms-flex-order: 2;
       order: 2;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-align: center;
+      align-items: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      height: 32px;
+      width: 86px;
+      font-size: 20px;
+      font-weight: bold;
       color: #fff; }
     header .logo-and-auth .auth {
+      margin-top: 20px;
       height: 175px;
       width: 100%;
       display: -ms-flexbox;
       display: flex;
       -ms-flex-pack: distribute;
       justify-content: space-around; }
+      header .logo-and-auth .auth a {
+        padding: 0;
+        border: 2px solid rgba(255, 255, 255, 0);
+        border-radius: 20px;
+        transition: all 200ms ease-in;
+        font-size: 14px; }
+        header .logo-and-auth .auth a:hover {
+          border: 2px solid white; }
+  header .moto {
+    width: 280px;
+    font-weight: bold;
+    color: #fff; }
+    header .moto h1 {
+      text-transform: uppercase;
+      text-align: center;
+      font-size: 30px; }
+    header .moto p {
+      font-family: "Roboto", sans-serif;
+      font-weight: 100;
+      font-size: 18px;
+      text-align: center; }
+    header .moto a {
+      display: -ms-flexbox;
+      display: flex;
+      width: 100%;
+      height: 40px;
+      background-color: #ff4e50;
+      border-radius: 20px;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -ms-flex-align: center;
+      align-items: center;
+      transition: all 200ms ease-out; }
+      header .moto a:hover {
+        background-color: #ffd74e;
+        color: #444;
+        cursor: pointer; }
+  @media (min-width: 768px) {
+    header {
+      background: url("../images/header-bg--tablet.png") no-repeat center center;
+      background-size: cover; }
+      header .logo-and-auth {
+        width: 100%;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        margin-bottom: 75px; }
+        header .logo-and-auth a {
+          display: inline;
+          -ms-flex-order: 0;
+          order: 0;
+          padding: 0 0 0 30px; }
+        header .logo-and-auth .auth {
+          width: 160px;
+          height: 100px;
+          margin-top: 0;
+          -ms-flex-align: center;
+          -ms-grid-row-align: center;
+          align-items: center;
+          padding: 0 30px 0 0; }
+          header .logo-and-auth .auth a {
+            display: -ms-flexbox;
+            display: flex; }
+      header .moto {
+        width: 490px;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -ms-flex-align: center;
+        align-items: center; }
+        header .moto h1 {
+          font-size: 52px;
+          margin-bottom: 0; }
+        header .moto p {
+          font-size: 24px;
+          margin-bottom: 35px; }
+        header .moto a {
+          width: 225px;
+          font-size: 14px; } }
