@@ -471,7 +471,8 @@ header {
       font-family: "Roboto", sans-serif;
       font-weight: 100;
       font-size: 18px;
-      text-align: center; }
+      text-align: center;
+      opacity: 0.8; }
     header .moto a {
       display: -ms-flexbox;
       display: flex;
@@ -539,6 +540,10 @@ header {
 
 main {
   border-bottom: 4px solid #ff4e50; }
+  main h3 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 22px;
+    text-align: center; }
   main .sliders .slider {
     margin-bottom: 10px;
     position: relative; }
@@ -567,7 +572,7 @@ main {
         background-image: url("../images/carousel-3--mobile.jpg"); }
   main .sliders .controls {
     position: absolute;
-    top: 10%;
+    top: 5%;
     display: block;
     width: 30px;
     height: 55px;
@@ -582,7 +587,38 @@ main {
     background-image: url("../images/arrow-right.png"); }
   main .sliders .content {
     position: absolute;
-    bottom: 0; }
+    bottom: 0;
+    left: 10px;
+    color: #fff; }
+    main .sliders .content a {
+      font-weight: normal;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -ms-flex-align: center;
+      align-items: center;
+      width: 70px;
+      height: 20px;
+      font-size: 10px;
+      color: #fff;
+      border: 2px solid rgba(255, 255, 255, 0);
+      border-radius: 20px;
+      background-color: #ff4e50;
+      transition: all 200ms ease-in; }
+      main .sliders .content a:hover {
+        background-color: #ffd74e;
+        color: #444;
+        cursor: pointer; }
+    main .sliders .content h4 {
+      margin: 10px 0;
+      font-family: "Montserrat", sans-serif;
+      font-size: 24px; }
+    main .sliders .content p {
+      font-family: "Roboto", sans-serif;
+      font-size: 14px;
+      font-weight: lighter;
+      opacity: 0.8; }
   @media (min-width: 768px) {
     main .sliders .jcarousel {
       width: 236px; }
