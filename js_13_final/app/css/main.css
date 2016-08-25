@@ -586,6 +586,8 @@ footer {
       padding-top: 35px;
       -ms-flex-direction: row;
       flex-direction: row;
+      -ms-flex-pack: distribute;
+      justify-content: space-around;
       -ms-flex-align: start;
       -ms-grid-row-align: flex-start;
       align-items: flex-start; }
@@ -602,3 +604,9 @@ footer {
           flex-direction: column;
           width: 40px;
           height: 85px; } }
+  @media (min-width: 1440px) {
+    footer {
+      -ms-flex-pack: justify;
+      justify-content: space-between; }
+      footer a img {
+        margin-left: 200px; } }

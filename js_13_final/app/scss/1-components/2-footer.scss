@@ -50,6 +50,7 @@ footer {
     @media(min-width: $tablet) {
         padding-top: 35px;
         flex-direction: row;
+        justify-content: space-around;
         align-items: flex-start;
 
         .logo {
@@ -66,9 +67,15 @@ footer {
                 width: 40px;
                 height: 85px;
             }
-        }
-        
+        }    
     }
 
-    
+    @media(min-width: $desktop) {
+        justify-content: space-between;        
+        a {
+            img {
+                margin-left: 200px;
+            }
+        }
+    }
 }
