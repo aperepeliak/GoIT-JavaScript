@@ -1,3 +1,125 @@
 main {
     border-bottom: 4px solid $pink;
+
+    .sliders {
+
+        .slider {
+            margin-bottom: 10px;
+            position: relative;
+        }
+
+        .jcarousel {
+            width: 300px;
+            position: relative;
+            overflow: hidden;
+            ul {
+                width: 20000em;
+                position: relative;
+                list-style: none;
+                margin: 0;
+                padding: 0;
+
+                li {
+                    display: block;
+                    width: 300px;
+                    height: 240px;
+                    left: 0;
+                    top: 0;
+                    float: left;
+                }
+
+                .item-1 {
+                    background-image: url('../images/carousel-1--mobile.jpg');
+                }
+                .item-2 {
+                    background-image: url('../images/carousel-2--mobile.jpg');
+                }
+                .item-3 {
+                    background-image: url('../images/carousel-3--mobile.jpg');
+                }
+            }
+        } 
+
+        .controls {
+            position: absolute;
+            top: 10%;
+            display: block;
+            width: 30px;
+            height: 55px;
+            transition: all 200ms ease-in-out;
+
+            &:hover {
+                transform: scale(1.2);
+            }
+        }
+
+        .jcarousel-prev {
+            left: 5px;            
+            background-image: url('../images/arrow-left.png');
+        }
+
+        .jcarousel-next {
+            right: 5px;
+            background-image: url('../images/arrow-right.png');
+        }
+
+        .content {
+            position: absolute;
+            bottom: 0;
+        }
+
+        @media(min-width: $tablet) {
+            .jcarousel {
+                width: 236px;
+
+                ul {
+                    li {
+                        width: 236px;
+                        height: 401px;
+                    }
+
+                    .item-1 {
+                        background-image: url('../images/carousel-1--tablet.jpg');
+                    }
+                    .item-2 {
+                        background-image: url('../images/carousel-2--tablet.jpg');
+                    }
+                    .item-3 {
+                        background-image: url('../images/carousel-3--tablet.jpg');
+                    }
+                }     
+            }
+
+            .controls {
+                top: 30%;
+            }
+        }
+
+        @media(min-width: $desktop) {
+            .jcarousel {
+                width: 300px;
+
+                ul {
+                    li {
+                        width: 300px;
+                        height: 400px;
+                    }
+
+                    .item-1 {
+                        background-image: url('../images/carousel-1--desktop.jpg');
+                    }
+                    .item-2 {
+                        background-image: url('../images/carousel-2--desktop.jpg');
+                    }
+                    .item-3 {
+                        background-image: url('../images/carousel-3--desktop.jpg');
+                    }
+                }             
+            }
+
+            .controls {
+                top: 40%;
+            }
+        }
+    }
 }
