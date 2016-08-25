@@ -541,6 +541,7 @@ header {
 main {
   border-bottom: 4px solid #ff4e50; }
   main h3 {
+    margin-top: 40px;
     font-family: "Montserrat", sans-serif;
     font-size: 22px;
     text-align: center; }
@@ -580,10 +581,10 @@ main {
     main .sliders .controls:hover {
       transform: scale(1.2); }
   main .sliders .jcarousel-prev {
-    left: 5px;
+    left: 10px;
     background-image: url("../images/arrow-left.png"); }
   main .sliders .jcarousel-next {
-    right: 5px;
+    right: 10px;
     background-image: url("../images/arrow-right.png"); }
   main .sliders .content {
     position: absolute;
@@ -620,19 +621,24 @@ main {
       font-weight: lighter;
       opacity: 0.8; }
   @media (min-width: 768px) {
-    main .sliders .jcarousel {
-      width: 236px; }
-      main .sliders .jcarousel ul li {
-        width: 236px;
-        height: 401px; }
-      main .sliders .jcarousel ul .item-1 {
-        background-image: url("../images/carousel-1--tablet.jpg"); }
-      main .sliders .jcarousel ul .item-2 {
-        background-image: url("../images/carousel-2--tablet.jpg"); }
-      main .sliders .jcarousel ul .item-3 {
-        background-image: url("../images/carousel-3--tablet.jpg"); }
-    main .sliders .controls {
-      top: 30%; } }
+    main .sliders {
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-pack: justify;
+      justify-content: space-between; }
+      main .sliders .jcarousel {
+        width: 236px; }
+        main .sliders .jcarousel ul li {
+          width: 236px;
+          height: 401px; }
+        main .sliders .jcarousel ul .item-1 {
+          background-image: url("../images/carousel-1--tablet.jpg"); }
+        main .sliders .jcarousel ul .item-2 {
+          background-image: url("../images/carousel-2--tablet.jpg"); }
+        main .sliders .jcarousel ul .item-3 {
+          background-image: url("../images/carousel-3--tablet.jpg"); }
+      main .sliders .controls {
+        top: 10%; } }
   @media (min-width: 1440px) {
     main .sliders .jcarousel {
       width: 300px; }
@@ -647,6 +653,9 @@ main {
         background-image: url("../images/carousel-3--desktop.jpg"); }
     main .sliders .controls {
       top: 40%; } }
+  @media (min-width: 1440px) {
+    main h3 {
+      margin-top: 100px; } }
 
 footer {
   box-sizing: border-box;
