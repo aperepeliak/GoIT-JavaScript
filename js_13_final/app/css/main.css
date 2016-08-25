@@ -541,6 +541,7 @@ main {
   border-bottom: 4px solid #ff4e50; }
 
 footer {
+  box-sizing: border-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-direction: column;
@@ -580,3 +581,24 @@ footer {
           border-bottom: 1px solid #666; }
   footer img {
     margin: 0 0 0 -25px; }
+  @media (min-width: 768px) {
+    footer {
+      padding-top: 35px;
+      -ms-flex-direction: row;
+      flex-direction: row;
+      -ms-flex-align: start;
+      -ms-grid-row-align: flex-start;
+      align-items: flex-start; }
+      footer .logo {
+        margin-top: 0; }
+      footer nav {
+        -ms-flex-align: start;
+        -ms-grid-row-align: flex-start;
+        align-items: flex-start; }
+        footer nav span {
+          margin-bottom: 15px; }
+        footer nav ul {
+          -ms-flex-direction: column;
+          flex-direction: column;
+          width: 40px;
+          height: 85px; } }
