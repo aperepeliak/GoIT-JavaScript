@@ -5,8 +5,18 @@ footer {
 }
 
 header {
-    height: 540px;
-  }
+  height: 540px;
+}
+
+main {
+  height: 3172px;
+}
+
+footer {
+  height: 189px;
+}
+
+
 
 
 
@@ -21,6 +31,14 @@ header {
     height: 700px;
   }
 
+    main {
+    height: 2501px;
+  }
+
+  footer {
+    height: 196px;
+  }
+
 }
 
 @media(min-width: $desktop) {
@@ -33,14 +51,15 @@ header {
  header {
     height: 700px;
   }
+
+  main {
+    height: 2501px;
+  }
+
+  footer {
+    height: 193px;
+  }
 }
-
-
-
-
-// Components heights
-
-
 
 
 

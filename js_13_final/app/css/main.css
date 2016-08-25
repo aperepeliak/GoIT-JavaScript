@@ -381,13 +381,23 @@ footer {
 header {
   height: 540px; }
 
+main {
+  height: 3172px; }
+
+footer {
+  height: 189px; }
+
 @media (min-width: 768px) {
   header,
   main,
   footer {
     padding: 0 calc(50% - 374px); }
   header {
-    height: 700px; } }
+    height: 700px; }
+  main {
+    height: 2501px; }
+  footer {
+    height: 196px; } }
 
 @media (min-width: 1440px) {
   header,
@@ -395,7 +405,11 @@ header {
   footer {
     padding: 0 calc(50% - 464px); }
   header {
-    height: 700px; } }
+    height: 700px; }
+  main {
+    height: 2501px; }
+  footer {
+    height: 193px; } }
 
 header {
   display: -ms-flexbox;
@@ -522,3 +536,6 @@ header {
     header {
       background: url("../images/header-bg--desktop.jpg") no-repeat center center;
       background-size: cover; } }
+
+main {
+  border-bottom: 4px solid #ff4e50; }
