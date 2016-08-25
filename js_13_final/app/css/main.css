@@ -714,7 +714,27 @@ main {
         border: 2px solid #fff;
         background-color: #ff4e50;
         color: #fff; }
-  @media (min-width: 1440px) {
+    @media (min-width: 768px) {
+      main .meet .partners {
+        -ms-flex-direction: row;
+        flex-direction: row;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -ms-flex-align: start;
+        -ms-grid-row-align: flex-start;
+        align-items: flex-start;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap; }
+        main .meet .partners div {
+          margin-right: 25px; } }
+    @media (min-width: 1440px) {
+      main .meet .partners {
+        -ms-flex-pack: justify;
+        justify-content: space-between; }
+        main .meet .partners div {
+          width: 220px;
+          margin-right: 10px; } }
+  @media (min-width: 768px) {
     main h3 {
       margin-top: 100px; } }
 

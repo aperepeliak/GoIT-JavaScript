@@ -175,6 +175,7 @@ main {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        
         .partners {
             display: flex;
             flex-direction: column;
@@ -226,11 +227,35 @@ main {
                 color: $white;
             }
         }
+
+        @media(min-width: $tablet) {
+            .partners {
+                flex-direction: row;
+                justify-content: center;
+                align-items: flex-start;
+                flex-wrap: wrap;
+
+                div {
+                    margin-right: 25px;
+                }
+            }
+        }
+
+        @media(min-width: $desktop) {
+            .partners {
+                justify-content: space-between;
+
+                div {
+                    width: 220px;
+                    margin-right: 10px;
+                }
+            }
+        }
     }
 
     
 
-    @media(min-width: $desktop) {
+    @media(min-width: $tablet) {
         h3 {
             margin-top: 100px;
         }
