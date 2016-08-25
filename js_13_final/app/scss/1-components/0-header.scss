@@ -134,4 +134,9 @@ header {
             }
         }
     }
+
+    @media(min-width: $tablet) {
+        background: url('../images/header-bg--desktop.jpg') no-repeat center center;
+        background-size: cover;
+    }
 }

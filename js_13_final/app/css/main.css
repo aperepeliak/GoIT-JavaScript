@@ -518,3 +518,7 @@ header {
         header .moto a {
           width: 225px;
           font-size: 14px; } }
+  @media (min-width: 768px) {
+    header {
+      background: url("../images/header-bg--desktop.jpg") no-repeat center center;
+      background-size: cover; } }
