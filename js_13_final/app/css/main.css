@@ -653,6 +653,67 @@ main {
         background-image: url("../images/carousel-3--desktop.jpg"); }
     main .sliders .controls {
       top: 40%; } }
+  main .meet {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-align: center;
+    align-items: center; }
+    main .meet .partners {
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -ms-flex-align: center;
+      align-items: center; }
+      main .meet .partners div {
+        width: 225px;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -ms-flex-align: center;
+        align-items: center; }
+        main .meet .partners div h5 {
+          font-family: "Montserrat", sans-serif;
+          font-size: 14px;
+          margin-top: 20px;
+          margin-bottom: 0; }
+        main .meet .partners div p {
+          font-family: "Roboto", sans-serif;
+          text-align: center;
+          font-weight: 100;
+          font-size: 14px;
+          color: #666;
+          opacity: 0.8;
+          margin-bottom: 30px; }
+    main .meet a {
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -ms-flex-align: center;
+      align-items: center;
+      width: 278px;
+      height: 36px;
+      border: 2px solid #ff4e50;
+      border-radius: 20px;
+      font-family: "Montserrat", sans-serif;
+      font-weight: bold;
+      font-size: 14px;
+      color: #ff4e50;
+      transition: all 200ms ease-in; }
+      main .meet a:hover {
+        border: 2px solid #fff;
+        background-color: #ff4e50;
+        color: #fff; }
   @media (min-width: 1440px) {
     main h3 {
       margin-top: 100px; } }

@@ -170,6 +170,66 @@ main {
         }
     }
 
+    .meet {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .partners {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            div {
+                width: 225px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                h5 {
+                    font-family: $headers;
+                    font-size: 14px;
+                    margin-top: 20px;
+                    margin-bottom: 0;
+                }
+
+                p {
+                    font-family: $texts;
+                    text-align: center;
+                    font-weight: 100;
+                    font-size: 14px;
+                    color: $grey;
+                    opacity: 0.8;
+                    margin-bottom: 30px;
+                }
+            }
+        }
+
+        a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 278px;
+            height: 36px;
+            border: 2px solid $pink;
+            border-radius: 20px;
+            font-family: $headers;
+            font-weight: bold;
+            font-size: 14px;
+            color: $pink;
+            transition: all 200ms ease-in;
+
+            &:hover {
+                border: 2px solid $white;
+                background-color: $pink;
+                color: $white;
+            }
+        }
+    }
+
+    
+
     @media(min-width: $desktop) {
         h3 {
             margin-top: 100px;
