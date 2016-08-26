@@ -810,7 +810,7 @@ main {
       font-size: 14px; }
       main .search input:focus {
         outline: none; }
-    main .search a {
+    main .search button {
       display: -ms-flexbox;
       display: flex;
       -ms-flex-pack: center;
@@ -827,9 +827,12 @@ main {
       color: #fff;
       background-color: #ff4e50;
       transition: all 200ms ease-in; }
-      main .search a:hover {
+      main .search button:hover {
         background-color: #fff;
         color: #ff4e50; }
+      main .search button:focus {
+        outline: none;
+        cursor: pointer; }
     @media (min-width: 768px) {
       main .search {
         -ms-flex-direction: row;
@@ -837,7 +840,7 @@ main {
         main .search input {
           width: 240px;
           margin: 0 10px 0 0; }
-        main .search a {
+        main .search button {
           width: 160px; } }
   @media (min-width: 768px) {
     main h3 {
