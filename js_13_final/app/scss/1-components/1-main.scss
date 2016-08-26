@@ -2,10 +2,20 @@ main {
     border-bottom: 4px solid $pink;
 
     h3 {
-        margin-top: 40px;
+        margin-top: 30px;
         font-family: $headers;
         font-size: 22px;
         text-align: center;
+        margin-bottom: 15px;
+    }
+
+    .hi {
+        text-align: center;
+        font-family: $texts;
+        font-size: 18px;
+        font-weight: 100;
+        color: $grey;
+        margin-bottom: 15px;
     }
 
     .sliders {
@@ -211,7 +221,7 @@ main {
             display: flex;
             justify-content: center;
             align-items: center;
-            width: 278px;
+            width: 276px;
             height: 36px;
             border: 2px solid $pink;
             border-radius: 20px;
@@ -238,6 +248,10 @@ main {
                 div {
                     margin-right: 25px;
                 }
+            }
+
+            a {
+                width: 192px;
             }
         }
 
@@ -278,6 +292,7 @@ main {
                 height: 100%;
                 top: 0;
                 left: 0;
+                border-radius: 10px;
                 background-color: $black;
                 background-position: center;
                 opacity: 0.6;
@@ -323,9 +338,74 @@ main {
         }
     }
 
+    .search {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        input {
+            width: 267px;
+            height: 29px;
+            padding: 5px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: 1px solid $grey;
+            opacity: .5;
+            font-size: 14px;
+
+            &:focus {
+                outline: none;
+            }
+        }
+
+        a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 276px;
+            height: 36px;
+            border: 2px solid $pink;
+            border-radius: 20px;
+            font-family: $headers;
+            font-weight: bold;
+            font-size: 14px;
+            color: $white;
+            background-color: $pink;
+            transition: all 200ms ease-in;
+
+            &:hover {
+                background-color: $white;
+                color: $pink;
+            }
+        }
+
+        @media(min-width: $tablet) {
+            flex-direction: row;
+            input {
+                width: 240px;
+                margin: 0 10px 0 0;
+            }
+
+            a {
+                width: 160px;
+            }
+        }
+    }
+
     @media(min-width: $tablet) {
         h3 {
-            margin-top: 100px;
+            margin-top: 90px;
+            margin-bottom: 40px;
+        }
+
+        .hi {
+            text-align: center;
+            font-family: $texts;
+            font-size: 18px;
+            color: $grey;
+            margin-bottom: 40px;
+            margin-top: 40px;
         }
     }
 }
