@@ -26,8 +26,12 @@ $(function () {
     $.getJSON(URL, function (data) {
         var $items = $('.grid-item');
         $.each(data.images, function (i, hit) {
-            var inner = '<img src="' + hit.imageurl + '">';
-            $items.eq(i).append(inner);
+            var innerImage = '<img src="' + hit.imageurl + '">';
+            var innerText = '<p>'+ hit.word +'</p>';
+            var layer = '<div class="layer"></div>';
+            $items.eq(i).append(innerImage);
+            $items.eq(i).append(layer);
+            $items.eq(i).append(innerText);
         });
     });
 
