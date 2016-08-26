@@ -263,8 +263,6 @@ main {
             width: 300px;
             height: 120px;
             margin: 5px 0;
-            
-            background-color: pink;
 
             img {
                 width: 100%;
@@ -282,12 +280,10 @@ main {
                 width: 236px;
                 height: 310px;
                 margin: 6px;
-                background-color: pink; 
             }
 
             .grid-item--width2 {
                 width: 484px;
-                background-color: grey; 
             }
         }
 
@@ -297,13 +293,11 @@ main {
             }
             .grid-item { 
                 width: 300px;
-                margin: 10px;
-                background-color: pink; 
+                margin: 10px; 
             }
 
             .grid-item--width2 { 
                 width: 620px;
-                background-color: grey; 
             }
         }
     }

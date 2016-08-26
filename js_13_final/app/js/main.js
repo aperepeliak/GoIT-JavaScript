@@ -20,17 +20,22 @@ $(function () {
         target: '+=1'
     });
 
+    var API_KEY = '2957253-77eda47a6d8c06c5cf8269032';
 
-    // $.ajax({
-    //     url: "api.pixplorer.co.uk/image?amount=8",
-    //     dataType: "jsonp",
-    //     success: function (data) {
-    //         var items = $('.grid-item');
-    //         if(data.count > 0) {
+    var URL = "http://api.pixplorer.co.uk/image?amount=7?size=l";
+    $.getJSON(URL, function (data) {
+        var $items = $('.grid-item');
+        $.each(data.images, function (i, hit) {
+            var inner = '<img src="' + hit.imageurl + '">';
+            $items.eq(i).append(inner);
+        });
+    });
 
-    //         }
-    //     }
-    // });
+
+
+
+
+
 
 
     $('.grid').masonry({
