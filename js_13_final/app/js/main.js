@@ -20,8 +20,6 @@ $(function () {
         target: '+=1'
     });
 
-    // var API_KEY = '2957253-77eda47a6d8c06c5cf8269032';
-
     var URL = "http://api.pixplorer.co.uk/image?amount=7?size=l";
     $.getJSON(URL, function (data) {
         var $items = $('.grid-item');
@@ -69,7 +67,6 @@ $(function () {
     });
 
     $('.grid').masonry({
-        // options
         itemSelector: '.grid-item',
         columnWidth: '.grid-sizer'
     });
