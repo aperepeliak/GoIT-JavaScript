@@ -20,7 +20,7 @@ $(function () {
         target: '+=1'
     });
 
-    var URL = "http://api.pixplorer.co.uk/image?amount=7?size=l";
+    var URL = 'http://api.pixplorer.co.uk/image?amount=7?size=l';
     $.getJSON(URL, function (data) {
         var $items = $('.grid-item');
         $.each(data.images, function (i, hit) {
@@ -48,7 +48,7 @@ $(function () {
 
         $.ajax({
 
-            url: "http://api.pixplorer.co.uk/image?word="+ searchInput +"&amount=7?size=l",
+            url: `http://api.pixplorer.co.uk/image?word=${searchInput}&amount=7?size=l`,
             dataType: "json",
 
             success: function (data) {
