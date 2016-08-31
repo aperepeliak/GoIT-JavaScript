@@ -38,7 +38,7 @@ $(function () {
 
         $.ajax({
 
-            url: `http://api.pixplorer.co.uk/image?word=${searchInput}&amount=7?size=l`,
+            url: 'http://api.pixplorer.co.uk/image?word=' + searchInput + '&amount=7?size=l',
             dataType: "json",
 
             success: function (data) {
