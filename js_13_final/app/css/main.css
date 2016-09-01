@@ -453,12 +453,12 @@ header {
       justify-content: space-around; }
       header .logo-and-auth .auth a {
         padding: 0;
-        border: 2px solid rgba(255, 255, 255, 0);
+        border: 2px solid red;
         border-radius: 20px;
         transition: all 200ms ease-in;
         font-size: 14px; }
         header .logo-and-auth .auth a:hover {
-          border: 2px solid white; }
+          border: 2px solid red; }
   header .moto {
     width: 280px;
     font-weight: bold;
